@@ -19,16 +19,29 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
 `;
+const ContentInfo = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+`;
+const AdditionalInfo = styled.div`
+  text-align: center;
+  margin: 10px;
+`;
 
-const Code = ({ title, content, code, styles, language, stylesObj }) => (
+const Code = ({ title, content, additionalInfo, code, styles, language, stylesObj }) => (
   <Container styles={styles} className="code">
     <LineHeader alignSelf="center">{title}</LineHeader>
-    <BoxHeading  align="center" content={content}>
+    <BoxHeading align="center" content={content}>
       <Content>
         <Prism language={language} style={atomDark} customStyle={{ background: 'var(--black)', ...stylesObj }}>
           {code.trim()}
         </Prism>
       </Content>
+      <ContentInfo>
+        <AdditionalInfo>{additionalInfo}</AdditionalInfo>
+        <AdditionalInfo>{additionalInfo}</AdditionalInfo>
+      </ContentInfo>
     </BoxHeading>
   </Container>
 );
@@ -36,6 +49,7 @@ const Code = ({ title, content, code, styles, language, stylesObj }) => (
 Code.propTypes = {
   title: string,
   content: string,
+  additionalInfo: string,
   code: string,
   stylesObj: object,
   language: string,

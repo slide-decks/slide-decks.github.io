@@ -1,21 +1,10 @@
 import { css } from 'styled-components';
+import code from './codeSnippets';
 
 const timelineNoContent = css`
   > .content {
     color: transparent;
   }
-`;
-
-const code = `
-const Code = ({ title, content, code, styles }) => (
-  <Container styles={styles} className="code">
-    <BoxHeading align="center" title={title} content={content}>
-      <CodeHighlighter language="javascript" style={atomDark}>
-        {code}
-      </CodeHighlighter>
-    </BoxHeading>
-  </Container>
-);
 `;
 
 export default {
@@ -67,6 +56,22 @@ export default {
             content: 'Pellentesque sollicitudin leo leo, vitae dapibus nisi convallis at.',
           },
         ],
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Znacznik <form>',
+        content: 'Wyznacza obszar formularza. To w nim wpisujemy wszystkie tagizwiązane z danym formularzem.',
+        additionalInfo: 'Vivamus ac risus eget orci mollis sodales.',
+        code: code.slide2,
+        language: 'html',
+        stylesObj: {
+          fontSize: 50,
+        },
       },
     },
     {
@@ -527,10 +532,10 @@ export default {
         title: 'Slide title',
         content:
           'Maecenas vulputate ac elit vel blandit. Morbi vulputate elit purus, vitae mattis urna tristique quis. Morbi ac cursus justo.',
-        code,
+        code: code.slide2,
         language: 'jsx',
         stylesObj: {
-          fontSize: 40,
+          fontSize: 30,
         },
       },
     },
