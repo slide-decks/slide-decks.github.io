@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { string, arrayOf, object } from 'prop-types';
+import { string, arrayOf, object, exact } from 'prop-types';
 import { Prism } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { BoxHeading, LineHeader } from '../components';
@@ -19,29 +19,29 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
 `;
-const ContentInfo = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-`;
+
 const AdditionalInfo = styled.div`
+  position: absolute;
   text-align: center;
   margin: 10px;
+  font-size: var(--size-sm);
+  max-width: 40%;
 `;
 
 const Code = ({ title, content, additionalInfo, code, styles, language, stylesObj }) => (
   <Container styles={styles} className="code">
     <LineHeader alignSelf="center">{title}</LineHeader>
-    <BoxHeading align="center" content={content}>
+    <BoxHeading align="center" content={content} withMargin="true">
       <Content>
         <Prism language={language} style={atomDark} customStyle={{ background: 'var(--black)', ...stylesObj }}>
           {code.trim()}
         </Prism>
       </Content>
-      <ContentInfo>
-        <AdditionalInfo>{additionalInfo}</AdditionalInfo>
-        <AdditionalInfo>{additionalInfo}</AdditionalInfo>
-      </ContentInfo>
+      {additionalInfo.map(info => (
+        <AdditionalInfo key={info.id} style={{ top: `${info.top}`, left: `${info.left}` }}>
+          {info.text}
+        </AdditionalInfo>
+      ))}
     </BoxHeading>
   </Container>
 );
@@ -49,7 +49,14 @@ const Code = ({ title, content, additionalInfo, code, styles, language, stylesOb
 Code.propTypes = {
   title: string,
   content: string,
-  additionalInfo: string,
+  additionalInfo: arrayOf(
+    exact({
+      id: string,
+      text: string,
+      top: string,
+      left: string,
+    }),
+  ),
   code: string,
   stylesObj: object,
   language: string,

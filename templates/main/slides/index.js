@@ -16,7 +16,7 @@ import Code from './Code';
 import CodeSandbox from './CodeSandbox';
 import SocialMedia from './SocialMedia';
 import Funnel from './Funnel';
-import Slide1 from './Slide1/Slide1';
+import SectionHeader from './SectionHeader';
 
 
 export default {
@@ -38,5 +38,5 @@ export default {
   CodeSandbox,
   SocialMedia,
   Funnel,
-  Slide1,
+  SectionHeader,
 };

@@ -6,6 +6,7 @@ const Content = styled.p`
   text-align: ${props => props.align};
   margin: ${props => (props.withMargin ? "80px" : 0)};
   padding: ${props => (props.withPadding ? '0 80px' : 0)};
+  font-size: var(--size-sm);
 `;
 
 const Wrapper = styled.div`

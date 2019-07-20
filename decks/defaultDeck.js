@@ -10,6 +10,7 @@ const timelineNoContent = css`
 export default {
   slides: [
     {
+      id: '0',
       template: 'Title',
       animation: {
         type: 'horizontal',
@@ -31,46 +32,100 @@ export default {
       },
     },
     {
-      template: 'Slide1',
+      id: '1',
+      template: 'SectionHeader',
       animation: {
         type: 'horizontal',
       },
       content: {
-        title: 'Slide title',
-        content:
-          'Maecenas vulputate ac elit vel blandit. Morbi vulputate elit purus, vitae mattis urna tristique quis. Morbi ac cursus justo.',
-        items: [
-          {
-            number: '1',
-            title: 'Item name',
-            content: 'Pellentesque sollicitudin leo leo, vitae dapibus nisi convallis at.',
-          },
-          {
-            number: '2',
-            title: 'Item name',
-            content: 'Pellentesque sollicitudin leo leo, vitae dapibus nisi convallis at.',
-          },
-          {
-            number: '3',
-            title: 'Item name',
-            content: 'Pellentesque sollicitudin leo leo, vitae dapibus nisi convallis at.',
-          },
-        ],
+        title: 'Formularze',
       },
     },
     {
+      id: '2',
       template: 'Code',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Znacznik <form>',
-        content: 'Wyznacza obszar formularza. To w nim wpisujemy wszystkie tagizwiązane z danym formularzem.',
-        additionalInfo: 'Vivamus ac risus eget orci mollis sodales.',
+        content: 'Wyznacza obszar formularza. To w nim wpisujemy wszystkie tagi związane z danym formularzem.',
+        additionalInfo: [],
         code: code.slide2,
         language: 'html',
         stylesObj: {
-          fontSize: 50,
+          fontSize: 60,
+        },
+      },
+    },
+    {
+      id: '3',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Atrybuty formularza - action',
+        content: 'Określa, gdzie mają zostać wysłane dane z formularza. Używanenajczęściej w połączeniu z PHP.',
+        additionalInfo: [],
+        code: code.slide3,
+        language: 'html',
+        stylesObj: {
+          fontSize: 60,
+        },
+      },
+    },
+    {
+      id: '4',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Atrybuty formularza - method',
+        content: 'Forma przesłania danych z formularza.',
+        additionalInfo: [
+          {
+            id: '1',
+            text: 'get - dane będą widoczne w pasku adresu przeglądarki.',
+            top: '70%',
+            left: '10%',
+          },
+          {
+            id: '2',
+            text: 'post - wysyła dane w sposób niewidoczny dla użytkownika.',
+            top: '70%',
+            left: '50%',
+          },
+        ],
+        code: code.slide4,
+        language: 'html',
+        stylesObj: {
+          fontSize: 60,
+        },
+      },
+    },
+    {
+      id: '5',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zawartość formularza',
+        content: '<label></label> Etykieta dla danego pola formularza.',
+        additionalInfo: [
+          {
+            id: '1',
+            text: 'Nazwa pola formularza, dla którego stworzyliśmy daną etykietę.',
+            top: '70%',
+            left: '10%',
+          },
+        ],
+        code: code.slide5,
+        language: 'html',
+        stylesObj: {
+          fontSize: 60,
         },
       },
     },
@@ -532,6 +587,7 @@ export default {
         title: 'Slide title',
         content:
           'Maecenas vulputate ac elit vel blandit. Morbi vulputate elit purus, vitae mattis urna tristique quis. Morbi ac cursus justo.',
+        additionalInfo: [],
         code: code.slide2,
         language: 'jsx',
         stylesObj: {
