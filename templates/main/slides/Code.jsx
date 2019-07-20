@@ -14,8 +14,13 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
 `;
@@ -30,7 +35,7 @@ const AdditionalInfo = styled.div`
 const Code = ({ title, content, additionalInfo, codeSnippets, styles, language, stylesObj }) => (
   <Container styles={styles} className="code">
     <LineHeader alignSelf="center">{title}</LineHeader>
-    <BoxHeading align="center" content={content} withMargin="true">
+    <BoxHeading align="center" content={content}>
       <Content>
         {codeSnippets.map(code => (
           <Prism

@@ -10,7 +10,6 @@ const timelineNoContent = css`
 export default {
   slides: [
     {
-      id: '0',
       template: 'Title',
       animation: {
         type: 'horizontal',
@@ -32,7 +31,6 @@ export default {
       },
     },
     {
-      id: '1',
       template: 'SectionHeader',
       animation: {
         type: 'horizontal',
@@ -42,7 +40,6 @@ export default {
       },
     },
     {
-      id: '2',
       template: 'Code',
       animation: {
         type: 'horizontal',
@@ -59,7 +56,6 @@ export default {
       },
     },
     {
-      id: '3',
       template: 'Code',
       animation: {
         type: 'horizontal',
@@ -76,7 +72,6 @@ export default {
       },
     },
     {
-      id: '4',
       template: 'Code',
       animation: {
         type: 'horizontal',
@@ -106,7 +101,6 @@ export default {
       },
     },
     {
-      id: '5',
       template: 'Code',
       animation: {
         type: 'horizontal',
@@ -130,7 +124,6 @@ export default {
       },
     },
     {
-      id: '6',
       template: 'Code',
       animation: {
         type: 'horizontal',
@@ -160,7 +153,6 @@ export default {
       },
     },
     {
-      id: '7',
       template: 'Code',
       animation: {
         type: 'horizontal',
@@ -170,7 +162,57 @@ export default {
         content: 'Połączenie pola formularza z jego etykietą.',
         additionalInfo: [],
         codeSnippets: code.slide7,
-        // dodać jeszcze jedna linię kodu
+        language: 'html',
+        stylesObj: {
+          fontSize: 60,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zawartość formularza',
+        content: `<datalist><datalist/>
+        Lista możliwych wartości inputa, dodająca do niego autosugestie..`,
+        additionalInfo: [],
+        codeSnippets: code.slide8,
+        language: 'html',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zawartość formularza',
+        content: `<select></select>
+        Lista rozwijana.`,
+        additionalInfo: [],
+        codeSnippets: code.slide9,
+        language: 'html',
+        stylesObj: {
+          fontSize: 50,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zawartość formularza',
+        content: `<textarea></textarea>
+        Pole do wpisania dłuższego tekstu. Rozmiar pola możeobejmować dowolną liczbę wierszy. `,
+        additionalInfo: [],
+        codeSnippets: code.slide10,
         language: 'html',
         stylesObj: {
           fontSize: 60,
