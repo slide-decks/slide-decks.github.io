@@ -51,7 +51,7 @@ export default {
         title: 'Znacznik <form>',
         content: 'Wyznacza obszar formularza. To w nim wpisujemy wszystkie tagi związane z danym formularzem.',
         additionalInfo: [],
-        code: code.slide2,
+        codeSnippets: code.slide2,
         language: 'html',
         stylesObj: {
           fontSize: 60,
@@ -68,7 +68,7 @@ export default {
         title: 'Atrybuty formularza - action',
         content: 'Określa, gdzie mają zostać wysłane dane z formularza. Używanenajczęściej w połączeniu z PHP.',
         additionalInfo: [],
-        code: code.slide3,
+        codeSnippets: code.slide3,
         language: 'html',
         stylesObj: {
           fontSize: 60,
@@ -98,7 +98,7 @@ export default {
             left: '50%',
           },
         ],
-        code: code.slide4,
+        codeSnippets: code.slide4,
         language: 'html',
         stylesObj: {
           fontSize: 60,
@@ -122,7 +122,55 @@ export default {
             left: '10%',
           },
         ],
-        code: code.slide5,
+        codeSnippets: code.slide5,
+        language: 'html',
+        stylesObj: {
+          fontSize: 60,
+        },
+      },
+    },
+    {
+      id: '6',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zawartość formularza',
+        content: '<input/> Pole do wpisania tekstu o wysokości jednego wiersza.',
+        additionalInfo: [
+          {
+            id: '1',
+            text: `Typ pola:\ntext - normalne (tekstowe) password - kropki zamiast znaków`,
+            top: '70%',
+            left: '10%',
+          },
+          {
+            id: '2',
+            text: 'Nazwa pola',
+            top: '70%',
+            left: '65%',
+          },
+        ],
+        codeSnippets: code.slide6,
+        language: 'html',
+        stylesObj: {
+          fontSize: 60,
+        },
+      },
+    },
+    {
+      id: '7',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zawartość formularza',
+        content: 'Połączenie pola formularza z jego etykietą.',
+        additionalInfo: [],
+        codeSnippets: code.slide7,
+        // dodać jeszcze jedna linię kodu
         language: 'html',
         stylesObj: {
           fontSize: 60,

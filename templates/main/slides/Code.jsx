@@ -23,19 +23,25 @@ const Content = styled.div`
 const AdditionalInfo = styled.div`
   position: absolute;
   text-align: center;
-  margin: 10px;
   font-size: var(--size-sm);
   max-width: 40%;
 `;
 
-const Code = ({ title, content, additionalInfo, code, styles, language, stylesObj }) => (
+const Code = ({ title, content, additionalInfo, codeSnippets, styles, language, stylesObj }) => (
   <Container styles={styles} className="code">
     <LineHeader alignSelf="center">{title}</LineHeader>
     <BoxHeading align="center" content={content} withMargin="true">
       <Content>
-        <Prism language={language} style={atomDark} customStyle={{ background: 'var(--black)', ...stylesObj }}>
-          {code.trim()}
-        </Prism>
+        {codeSnippets.map(code => (
+          <Prism
+            key={code.id}
+            language={language}
+            style={atomDark}
+            customStyle={{ background: 'var(--black)', ...stylesObj }}
+          >
+            {code.content.trim()}
+          </Prism>
+        ))}
       </Content>
       {additionalInfo.map(info => (
         <AdditionalInfo key={info.id} style={{ top: `${info.top}`, left: `${info.left}` }}>
@@ -57,7 +63,12 @@ Code.propTypes = {
       left: string,
     }),
   ),
-  code: string,
+  codeSnippets: arrayOf(
+    exact({
+      id: string,
+      content: string,
+    }),
+  ),
   stylesObj: object,
   language: string,
   styles: arrayOf(string),
