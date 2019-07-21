@@ -1,6 +1,7 @@
 import Title from './Title';
 import ImageDescription from './ImageDescription';
 import ImageDescription2 from './ImageDescription2';
+import ImageDescription3 from './ImageDescription3';
 import Services from './Services';
 import Services2 from './Services2';
 import Timeline from './Timeline';
@@ -23,6 +24,7 @@ export default {
   Title,
   ImageDescription,
   ImageDescription2,
+  ImageDescription3,
   Services,
   Services2,
   Timeline,

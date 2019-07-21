@@ -220,18 +220,67 @@ export default {
       },
     },
     {
-      template: 'ImageDescription',
+      template: 'Code',
       animation: {
         type: 'horizontal',
       },
       content: {
-        image: 'https://images.unsplash.com/photo-1553029230-2be4f5c23de8?w=600&q=80',
-        title: 'Slide title',
-        content: `
-          Vivamus ac risus eget orci mollis sodales. Praesent faucibus accumsan risus. Etiam semper orci id tellus dignissim pretium.
-
-          Praesent laoreet nibh quis semper rutrum. Nulla quis lorem sit amet magna ultrices tempus.
-        `,
+        title: 'Zawartość formularza',
+        content: `<textarea></textarea>
+        Pole do wpisania dłuższego tekstu. Rozmiar pola możeobejmować dowolną liczbę wierszy. `,
+        additionalInfo: [],
+        codeSnippets: code.slide11,
+        language: 'html',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'ImageDescription3',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: '/static/mockup.png',
+        title: 'Co zakodujemy - mockup',
+        link: 'https://www.figma.com/file/BDpg9TcboEBXlmmlevMd8h/Untitled-(Copy)?node-id=13%3A21',
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zawartość formularza',
+        content: `<textarea></textarea>
+        Pole do wpisania dłuższego tekstu. Rozmiar pola możeobejmować dowolną liczbę wierszy. `,
+        additionalInfo: [],
+        codeSnippets: code.slide13,
+        language: 'html',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'SectionHeader',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Responsywność',
+      },
+    },
+    {
+      template: 'ImageDescription3',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: '/static/meme-RWD.png',
+        title: 'Po co nam responsywność?',
       },
     },
     {
@@ -240,13 +289,118 @@ export default {
         type: 'horizontal',
       },
       content: {
-        image: 'https://images.unsplash.com/photo-1548407260-da850faa41e3?w=600&q=80',
-        title: 'Slide title',
-        content: `
-          Vivamus ac risus eget orci mollis sodales. Praesent faucibus accumsan risus. Etiam semper orci id tellus dignissim pretium.
-
-          Praesent laoreet nibh quis semper rutrum. Nulla quis lorem sit amet magna ultrices tempus.
-        `,
+        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        title: 'Responsywność',
+        content: `Zdolność strony internetowej do automatycznego dopasowywaniaswojego wyglądu do wielkości ekranu, na którym jest wyświetlana.`,
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Skalowanie - jak się go pozbyć?',
+        content: `Ze względu na mniejszą rozdzielczość telefonów, często skalująone faktyczne rozmiary strony (np. zmniejszając je dwukrotnie).Aby tego uniknąć wystarczy jeden tag: `,
+        additionalInfo: [],
+        codeSnippets: code.slide17,
+        language: 'html',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Skalowanie - jak się go pozbyć?',
+        content: `Ze względu na mniejszą rozdzielczość telefonów, często skalująone faktyczne rozmiary strony (np. zmniejszając je dwukrotnie).Aby tego uniknąć wystarczy jeden tag: `,
+        additionalInfo: [
+          {
+            id: '1',
+            text: 'Sprawia, że szerokość strony jest równa szerokości urządzenia.',
+            top: '40%',
+            left: '35%',
+          },
+          {
+            id: '2',
+            text: 'Sprawia, że strona domyślnie wczytywana jest w skali 1:1.',
+            top: '70%',
+            left: '50%',
+          },
+        ],
+        codeSnippets: code.slide17,
+        language: 'html',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'media queries',
+        content: `Konstrukcja, dzięki której możemy zadecydować na jakich ekranach i przy jakich ich wielkościach zastosować określone style. `,
+        additionalInfo: [],
+        codeSnippets: code.slide19,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'media queries',
+        content: `Domyślnie wszystko welemencie o klasie container będzie miało font owielkości 16px. `,
+        additionalInfo: [],
+        codeSnippets: code.slide19,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'media queries',
+        content: `Na ekranach o szerokości mniejszej lub równej 680px domyślne style zostaną nadpisane a font będzie miał 14 px. `,
+        additionalInfo: [],
+        codeSnippets: code.slide19,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+        },
+      },
+    },
+    {
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'media queries',
+        content: `Słowo kluczowe, które zawsze pojawia się na początku reguły dotyczącej styli specyficznych dla ekranów danego typu i rozmiaru. `,
+        additionalInfo: [],
+        codeSnippets: code.slide22,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+        },
       },
     },
     {
@@ -666,23 +820,6 @@ export default {
             content: 'Vivamus ac risus eget orci mollis sodales. Etiam semper orci id tellus dignissim pretium.',
           },
         ],
-      },
-    },
-    {
-      template: 'Code',
-      animation: {
-        type: 'horizontal',
-      },
-      content: {
-        title: 'Slide title',
-        content:
-          'Maecenas vulputate ac elit vel blandit. Morbi vulputate elit purus, vitae mattis urna tristique quis. Morbi ac cursus justo.',
-        additionalInfo: [],
-        code: code.slide2,
-        language: 'jsx',
-        stylesObj: {
-          fontSize: 30,
-        },
       },
     },
     {
