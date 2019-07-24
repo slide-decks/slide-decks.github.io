@@ -1318,5 +1318,181 @@ export default {
         link: '',
       },
     },
+    {
+      slide_id: '57',
+      template: 'SectionHeader',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Zmienne',
+      },
+    },
+    {
+      slide_id: '58',
+      template: 'ImageDescription2',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: '/static/zmienne-css.png',
+        title: 'Zmienne CSS',
+        content: `Nazwy nadawane określonym wartościom właściwości CSS.
+        Dzięki nim możemy później w kodzie odwoływać się do nazwy właściwości zamiast za każdym razem wpisywać jej wartość.`,
+        stylesObj: {
+          marginTop: 'auto',
+          marginBottom: 'auto',
+        },
+      },
+    },
+    {
+      slide_id: '59',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Stworzenie zmiennej',
+        content: `Zdefiniowana zmienna będzie dostępna wewnątrz danego selektora oraz we wszystkich jego dzieciach.`,
+        additionalInfo: [],
+        shapes: [],
+        // Dodać prostokąt wokół root SVG
+        codeSnippets: code.slide59,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '25%',
+        },
+      },
+    },
+    {
+      slide_id: '60',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Stworzenie zmiennej',
+        content: `Znaczniki informujące, że tworzymy zmienną.`,
+        additionalInfo: [],
+        shapes: [],
+        // Dodać prostokąt wokół znaczników SVG
+        codeSnippets: code.slide59,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '25%',
+        },
+      },
+    },
+    {
+      slide_id: '61',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Stworzenie zmiennej',
+        content: `Ustalona przez nas nazwa danej zmiennej.`,
+        additionalInfo: [],
+        shapes: [],
+        // Dodać prostokąt wokół primaryColor SVG
+        codeSnippets: code.slide59,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '25%',
+        },
+      },
+    },
+    {
+      slide_id: '62',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Stworzenie zmiennej',
+        content: `Wartość zmiennej.`,
+        additionalInfo: [],
+        shapes: [],
+        // Dodać prostokąt wokół wartości SVG
+        codeSnippets: code.slide59,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '25%',
+        },
+      },
+    },
+    {
+      slide_id: '63',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Użycie zmiennej',
+        content: `Zmiennej używamy korzystając ze składni var(x), gdzie x jestnazwą zmiennej.`,
+        additionalInfo: [],
+        shapes: [
+          {
+            number: '1',
+            src: 'static/arrow.svg',
+            width: 80,
+            height: 80,
+            style: {
+              top: '57%',
+              left: '57%',
+              transform: 'rotate(90deg)',
+            },
+          },
+        ],
+        // Dodać prostokąt wokół wartości i var(--primaryColor) SVG
+        codeSnippets: code.slide63,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '30%',
+          left: '30%',
+        },
+      },
+    },
+    {
+      slide_id: '64',
+      template: 'SectionHeader',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'CSS grid layout',
+      },
+    },
+    {
+      slide_id: '65',
+      template: 'ImageDescription2',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: '/static/css-grid.jpg',
+        title: 'CSS grid',
+        content: `Zestaw właściwości umożliwiających projektowanie dwuwymiarowych interfejsów.
+        W wielu przypadkach stanowi ciekawą alternatywę dla stosowanego dotychczas flexboxa.`,
+        stylesObj: {
+          marginTop: 'auto',
+          marginBottom: 'auto',
+        },
+      },
+    },
   ],
 };

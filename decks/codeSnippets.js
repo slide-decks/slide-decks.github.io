@@ -160,4 +160,16 @@ export default {
       content: `.yellow { z-index: 100; }\n.red { z-index: 1; }\n.green { z-index: 0; }\n.blue { z-index: -2; }`,
     },
   ],
+  slide59: [
+    {
+      id: '1',
+      content: `:root {\n\t--primaryColor: #f23d12;\n}`,
+    },
+  ],
+  slide63: [
+    {
+      id: '1',
+      content: `:root {\n\t--primaryColor: #f23d12;\n}\n.element {\n\tcolor: var(--primaryColor);\n}`,
+    },
+  ],
 };
