@@ -84,15 +84,8 @@ export default {
   slide19: [
     {
       id: '1',
-      content: `\t.container {
-        font-size: 16px;
-      }
-
-      @media screen and (max-width: 680px) {
-        .container {
-          font-size: 14px;
-        }
-      }`,
+      content: `.container {\n\tfont-size: 16px;\n}
+      \n@media screen and (max-width: 680px) {\n\t.container {\n\tfont-size: 14px;\n\t}\n}`,
     },
   ],
   slide22: [
@@ -101,4 +94,16 @@ export default {
       content: `@media screen and (max-width: 680px) {...}`,
     },
   ],
+  slide24: [
+    {
+      id: '1',
+      content: `@media (max-width: 680px) {...}`,
+    },
+  ],
+  slide26: [
+    {
+      id: '1',
+      content: `@media screen, (max-width: 680px) {...}`,
+    }
+  ]
 };

@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ease-out 2000ms;  
+  animation: ease-out 2000ms;
   background-color: var(--slide-background);
 
   > div {
@@ -52,6 +52,7 @@ Slide.propTypes = {
     content: object.isRequired,
     key: number.isRequired,
     template: string.isRequired,
+    slide_id: string,
   }),
   template: objectOf(func).isRequired,
   type: oneOf(['prev', 'curr', 'next']).isRequired,

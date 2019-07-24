@@ -6,6 +6,7 @@ import Slide from '../Slide';
 import { nextSlide, prevSlide, handleArrowPress } from './slides-methods';
 import { renderHead } from './renderers';
 import { Panel } from '../../templates/main/components';
+import ThemeContext from '../../templates/main/components/ThemeContext';
 import { ProgressBar } from '../../templates/main/components';
 import { updateURL, checkForStateChange, checkForNewAnimation, addKeysToSlides, getScale } from './utils';
 import { Container } from './styles';
@@ -40,7 +41,7 @@ class Deck extends Component {
     this.toggleTheme = this.toggleTheme.bind(this);
   }
 
-  toggleTheme() {
+    toggleTheme() {
     const theme = this.state.theme === 'dark' ? 'light' : 'dark';
     this.setState({ theme });
     document.documentElement.setAttribute('data-theme', theme);
@@ -48,12 +49,14 @@ class Deck extends Component {
     window.setTimeout(function() {
       document.documentElement.classList.remove('theme-transition')
     }, 1000)
+    this.forceUpdate();
       }
 
   componentDidMount() {
     window.addEventListener('keydown', this.moveProgressBar);
     window.addEventListener('keydown', this.handleArrowPress);
     window.addEventListener('resize', this.handleScaleChange);
+
 
     if (this.template.scripts.onInit) {
       this.template.scripts.onInit(this);
@@ -108,24 +111,26 @@ class Deck extends Component {
   };
 
   render() {
-    const { scale, slideIndex, percentage } = this.state;
+    const { scale, slideIndex, percentage, theme } = this.state;
     const { width, height } = this.template.globals;
 
     return (
       <>
         {this.head}
         <GlobalStyle templateStyle={this.template.styles} />
+        <ThemeContext.Provider value={theme}>
         <Container width={width} height={height} scale={scale}>
           {this.slides.map(this.renderSlide)}
-          <Panel 
-            actualSlide={slideIndex} 
-            slides={this.slidesCount} 
+          <Panel
+            actualSlide={slideIndex}
+            slides={this.slidesCount}
             prevSlide={this.prevSlide}
             nextSlide={this.nextSlide}
             newTheme={this.toggleTheme}
           />
           <ProgressBar percentage={percentage} />
         </Container>
+        </ThemeContext.Provider>
       </>
     );
   }

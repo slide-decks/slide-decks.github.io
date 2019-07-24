@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { string, arrayOf } from 'prop-types';
+import { string, arrayOf, object } from 'prop-types';
 import { renderContent } from '../utils';
 import { LineHeader } from '../components';
 
@@ -39,14 +39,14 @@ const Content = styled.div`
   padding-top: 24px;
 `;
 
-const ImageDescription2 = ({ title, image, content, styles }) => (
+const ImageDescription2 = ({ title, image, content, styles, stylesObj }) => (
   <Container styles={styles} className="image-description2">
     <Header>
       <LineHeader>{title}</LineHeader>
     </Header>
     <Middle className="middle">
       <Image src={image} className="image" />
-      <Content className="content">{renderContent(content)}</Content>
+      <Content className="content" style={stylesObj}>{renderContent(content)}</Content>
     </Middle>
   </Container>
 );
@@ -56,6 +56,7 @@ ImageDescription2.propTypes = {
   title: string.isRequired,
   content: string.isRequired,
   styles: arrayOf(string),
+  stylesObj: object,
 };
 
 export default ImageDescription2;

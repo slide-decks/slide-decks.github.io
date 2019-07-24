@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
 import { Icon } from '../../components';
+import { renderContent } from '../../utils';
 
 const Container = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const Item = ({ icon, title, content }) => (
   <Container className="item">
     <Icon src={icon} width={80} height={80} fill="var(--primary)" />
     <Title className="title">{title}</Title>
-    <div className="content">{content}</div>
+    <div className="content">{renderContent(content)}</div>
   </Container>
 );
 

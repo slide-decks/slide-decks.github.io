@@ -18,7 +18,7 @@ const Header = styled.div`
   margin: 0 auto 80px auto;
 `;
 
-const Middle = styled.a`
+const Middle = styled.div`
   display: flex;
   flex-direction: center;
   width: 100%;

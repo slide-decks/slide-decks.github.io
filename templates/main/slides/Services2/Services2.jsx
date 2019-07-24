@@ -26,7 +26,7 @@ const Services2 = ({ title, content, items, styles }) => (
     <BoxHeading align="center" content={content}>
       <Items className="items">
         {items.map(item => (
-          <Item key={item.icon} {...item} />
+          <Item key={item.service_id} {...item} />
         ))}
       </Items>
     </BoxHeading>
@@ -38,6 +38,7 @@ Services2.propTypes = {
   content: string.isRequired,
   items: arrayOf(
     exact({
+      service_id: string,
       icon: string,
       title: string,
       content: string,

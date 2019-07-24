@@ -18,7 +18,8 @@ import CodeSandbox from './CodeSandbox';
 import SocialMedia from './SocialMedia';
 import Funnel from './Funnel';
 import SectionHeader from './SectionHeader';
-
+import IFrame from './IFrame';
+import Image from './Image';
 
 export default {
   Title,
@@ -41,4 +42,6 @@ export default {
   SocialMedia,
   Funnel,
   SectionHeader,
+  IFrame,
+  Image,
 };

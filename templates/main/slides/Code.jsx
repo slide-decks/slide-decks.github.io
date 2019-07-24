@@ -1,8 +1,10 @@
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { string, arrayOf, object, exact } from 'prop-types';
+import { string, arrayOf, object, exact, number } from 'prop-types';
 import { Prism } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { BoxHeading, LineHeader } from '../components';
+import { atomDark, atomDefault } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { BoxHeading, LineHeader, Shape } from '../components';
+import ThemeContext from '../components/ThemeContext';
 
 const Container = styled.div`
   width: 100%;
@@ -32,30 +34,44 @@ const AdditionalInfo = styled.div`
   max-width: 40%;
 `;
 
-const Code = ({ title, content, additionalInfo, codeSnippets, styles, language, stylesObj }) => (
-  <Container styles={styles} className="code">
-    <LineHeader alignSelf="center">{title}</LineHeader>
-    <BoxHeading align="center" content={content}>
-      <Content>
-        {codeSnippets.map(code => (
-          <Prism
-            key={code.id}
-            language={language}
-            style={atomDark}
-            customStyle={{ background: 'var(--black)', ...stylesObj }}
-          >
-            {code.content.trim()}
-          </Prism>
+const Code = ({ title, content, additionalInfo, shapes, codeSnippets, styles, language, stylesObj }) => {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <Container styles={styles} className="code">
+      <LineHeader alignSelf="center">{title}</LineHeader>
+      <BoxHeading align="center" content={content} withMargin>
+        <Content>
+          {codeSnippets.map(code => (
+            <Prism
+              key={code.id}
+              language={language}
+              style={theme === 'light' ? atomDefault : atomDark}
+              customStyle={{ background: theme === 'light' ? 'var(--white)' : 'var(--black)', ...stylesObj }}
+            >
+              {code.content.trim()}
+            </Prism>
+          ))}
+        </Content>
+        {additionalInfo.map(info => (
+          <AdditionalInfo key={info.id} style={{ top: `${info.top}`, left: `${info.left}` }}>
+            {info.text}
+          </AdditionalInfo>
         ))}
-      </Content>
-      {additionalInfo.map(info => (
-        <AdditionalInfo key={info.id} style={{ top: `${info.top}`, left: `${info.left}` }}>
-          {info.text}
-        </AdditionalInfo>
-      ))}
-    </BoxHeading>
-  </Container>
-);
+        {shapes.map(shape => (
+          <Shape
+            key={shape.number}
+            src={shape.src}
+            width={shape.width}
+            height={shape.height}
+            fill="var(--primary)"
+            style={shape.style}
+          />
+        ))}
+      </BoxHeading>
+    </Container>
+  );
+};
 
 Code.propTypes = {
   title: string,
@@ -66,6 +82,15 @@ Code.propTypes = {
       text: string,
       top: string,
       left: string,
+    }),
+  ),
+  shapes: arrayOf(
+    exact({
+      number: string,
+      width: number,
+      height: number,
+      src: string,
+      style: object,
     }),
   ),
   codeSnippets: arrayOf(
