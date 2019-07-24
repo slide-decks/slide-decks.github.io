@@ -104,6 +104,60 @@ export default {
     {
       id: '1',
       content: `@media screen, (max-width: 680px) {...}`,
-    }
-  ]
+    },
+  ],
+  slide41: [
+    {
+      id: '1',
+      content: `.box {\n\tposition: relative;\n}\n\n.box::before {\n\tcontent: '';\n\tposition: absolute;\n}`,
+    },
+  ],
+  slide45: [
+    {
+      id: '1',
+      content: `.box {\n\tposition: static;\n}`,
+    },
+  ],
+  slide46: [
+    {
+      id: '1',
+      content: `.box {\n\tposition: relative;\n}`,
+    },
+  ],
+  slide47: [
+    {
+      id: '1',
+      content: `.box {\n\tpositon: relative;\n\ttop: 20px;\n\tleft: 40px;\n}`,
+    },
+  ],
+  slide49: [
+    {
+      id: '1',
+      content: `.box {\n\tposition: absolute;\n}`,
+    },
+  ],
+  slide50: [
+    {
+      id: '1',
+      content: `.box-1 {\n\tpositon: relative;\n}\n.box-2 {\n\tposition: absolute;\n\ttop: 20px;\n\tleft: 20px;\n}`,
+    },
+  ],
+  slide52: [
+    {
+      id: '1',
+      content: `.box {\n\tposition: fixed;\n}`,
+    },
+  ],
+  slide53: [
+    {
+      id: '1',
+      content: `.box {\n\tposition: fixed;\n\tbottom: 10px;\n\tright: 10px;\n}`,
+    },
+  ],
+  slide54: [
+    {
+      id: '1',
+      content: `.yellow { z-index: 100; }\n.red { z-index: 1; }\n.green { z-index: 0; }\n.blue { z-index: -2; }`,
+    },
+  ],
 };

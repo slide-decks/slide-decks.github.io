@@ -1,6 +1,5 @@
 import { css } from 'styled-components';
 import code from './codeSnippets';
-import { blue } from 'ansi-colors';
 
 const timelineNoContent = css`
   > .content {
@@ -924,6 +923,67 @@ export default {
           {
             service_id: '1',
             icon: '',
+            title: '::first-letter',
+            content: 'Pierwsza litera w elemencie.',
+          },
+          {
+            service_id: '2',
+            icon: '',
+            title: '::first-line',
+            content: 'Pierwsza linia tekstu w elemencie.',
+          },
+          {
+            service_id: '3',
+            icon: '',
+            title: '::selection',
+            content: 'Zaznaczony fragment tekstu.',
+          },
+          {
+            service_id: '4',
+            icon: '',
+            title: '::before',
+            content: 'n-te dziecko danego elementu. n jest liczbą naturalną >= 1.',
+          },
+          {
+            service_id: '5',
+            icon: '',
+            title: '::after',
+            content: 'n-te dziecko elementu o określonym typie. n jest liczbą naturalną >= 1.',
+          },
+        ],
+      },
+    },
+    {
+      slide_id: '39',
+      template: 'ImageDescription2',
+      animation: {
+        type: 'horizontal',
+      },
+      // Dodać iFrame z Codepen!!!!!!!!
+      content: {
+        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        title: 'Pseudoelement',
+        content: `Pozwalają odnieść się do specjalnychelementów struktury dokumentu orazutomatycznie generować pewnązawartość w określonych miejscach.
+        Pseudoelementy zawsze zaczynamy podwójnym dwukropkiem.`,
+        stylesObj: {
+          marginTop: 'auto',
+          marginBottom: 'auto',
+        },
+      },
+    },
+    {
+      slide_id: '40',
+      template: 'Services2',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Pseudoelemnty',
+        content: 'Posiadanie tej klasy zależy od miejsca elementu w dokumencie (w relacji do innych elementów).',
+        items: [
+          {
+            service_id: '1',
+            icon: '',
             title: ':first-child',
             content: 'Pierwsze dziecko danego elementu',
           },
@@ -943,33 +1003,319 @@ export default {
             service_id: '4',
             icon: '',
             title: ':nth-child(n)',
-            content: 'n-te dziecko danego elementu.n jest liczbą naturalną >= 1.',
+            content: 'Pojawia się przed elementem, którego dotyczy.',
           },
           {
             service_id: '5',
             icon: '',
             title: ':nth-of-type(n)',
-            content: 'n-te dziecko elementu o określonym typie. n jest liczbą naturalną >= 1.',
+            content: 'Pojawia się za elementem, którego dotyczy.',
           },
         ],
       },
     },
     {
-      slide_id: '39',
-      template: 'ImageDescription2',
+      slide_id: '41',
+      template: 'Code',
       animation: {
         type: 'horizontal',
       },
-      // Dodać iFrame z Codepen!!!!!!!!
       content: {
-        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
-        title: 'Pseudoklasa',
-        content: `Pozwalają odnieść się do specjalnychelementów struktury dokumentu orazutomatycznie generować pewnązawartość w określonych miejscach.
-        Pseudoelementy zawsze zaczynamy podwójnym dwukropkiem.`,
+        title: 'Jak wstawić element z użyciem ::before?',
+        content: '',
+        additionalInfo: [
+          {
+            id: '1',
+            text: 'Właściwość wymagana, aby cokolwiek pojawiło się na ekranie.',
+            top: '55%',
+            left: '55%',
+          },
+        ],
+        shapes: [
+          {
+            number: '1',
+            src: 'static/arrow.svg',
+            width: 100,
+            height: 100,
+            style: {
+              top: '60%',
+              left: '50%',
+              transform: 'rotate(150deg)',
+            },
+          },
+        ],
+        codeSnippets: code.slide41,
+        language: 'css',
         stylesObj: {
-          marginTop: 'auto',
-          marginBottom: 'auto',
+          fontSize: 50,
+          position: 'absolute',
+          top: '15%',
+          left: '20%',
         },
+      },
+    },
+    {
+      slide_id: '42',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/oMpPrp',
+      },
+    },
+    {
+      slide_id: '43',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://cssicon.space/#/',
+      },
+    },
+    {
+      slide_id: '44',
+      template: 'SectionHeader',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Pozycjonowanie',
+      },
+    },
+    {
+      slide_id: '45',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'position',
+        content: 'Określa pozycję elementu względem innych elementów.',
+        additionalInfo: [
+          {
+            id: '1',
+            text: 'Wartość domyślna',
+            top: '70%',
+            left: '55%',
+          },
+        ],
+        shapes: [
+          {
+            number: '1',
+            src: 'static/arrow.svg',
+            width: 100,
+            height: 100,
+            style: {
+              top: '58%',
+              left: '60%',
+              transform: 'rotate(270deg)',
+            },
+          },
+        ],
+        codeSnippets: code.slide45,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '20%',
+          left: '30%',
+        },
+      },
+    },
+    {
+      slide_id: '46',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'position: relative',
+        content: `Sprawia, że element może być przesuwany względem swojej pierwotnej pozycji. Przesunięcie jest jednak pozorne (tzn. inne elementy nie dostrzegają go).`,
+        additionalInfo: [],
+        shapes: [],
+        codeSnippets: code.slide46,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '30%',
+        },
+      },
+    },
+    {
+      slide_id: '47',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'position: relative',
+        content: `Po przesunięciu .box znajduje się w żółtej pozycji, jednak elementy otaczające go zachowują się tak, jakby nadal pozostawał w niebieskiej pozycji (stał w miejscu).`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz o przesunięciu diva o klasie .box
+        codeSnippets: code.slide47,
+        language: 'css',
+        stylesObj: {
+          fontSize: 50,
+          position: 'absolute',
+          top: '30%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '48',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/RBjqKG',
+      },
+    },
+    {
+      slide_id: '49',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'position: absolute',
+        content: `Sprawia, że element może być przesuwany względem najbliższego rodzica  o niestatycznej pozycji. Przesunięcie "wyjmuje" element ze swojego miejsca.`,
+        additionalInfo: [],
+        shapes: [],
+        codeSnippets: code.slide49,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '30%',
+        },
+      },
+    },
+    {
+      slide_id: '50',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'position: absolute',
+        content: `Po przesunięciu .box-2 znajduje się w żółtej pozycji, jednak elementy otaczające go (.box-1) zachowują się tak, jakby nie istniał.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz o przesunięciu diva o klasie .box-1
+        codeSnippets: code.slide50,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '30%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '51',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/GBOwym',
+      },
+    },
+    {
+      slide_id: '52',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'position: fixed',
+        content: `Sprawia, że element może być przesuwany względem okna przeglądarki i pozostawać w jednym miejscu mimo scrollowania strony. Przesunięcie "wyjmuje" element ze swojego miejsca.`,
+        additionalInfo: [],
+        shapes: [],
+        codeSnippets: code.slide52,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '30%',
+        },
+      },
+    },
+    {
+      slide_id: '53',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'position: fixed',
+        content: `Po przesunięciu .box znajduje się w żółtej pozycji, jednak elementy otaczające go zachowują się tak, jakby nie istniał.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz o przesunięciu diva o klasie .box!
+        codeSnippets: code.slide53,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '30%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '54',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'z-index',
+        content: `Położenie elementu niestatycznego na osi Z. Określa "jak wysoko" znajdują się elementy.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać gif o z-index
+        codeSnippets: code.slide54,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '30%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '55',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/ajVrpY',
+      },
+    },
+    {
+      slide_id: '56',
+      template: 'ImageDescription3',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: '/static/z-index.png',
+        // poprawić style dla zdjęcia!
+        title: 'z-index',
+        link: '',
       },
     },
   ],
