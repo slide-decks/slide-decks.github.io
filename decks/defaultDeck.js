@@ -67,7 +67,7 @@ export default {
       },
       content: {
         title: 'Atrybuty formularza - action',
-        content: 'Określa, gdzie mają zostać wysłane dane z formularza. Używanenajczęściej w połączeniu z PHP.',
+        content: 'Określa, gdzie mają zostać wysłane dane z formularza. Używane najczęściej w połączeniu z PHP.',
         additionalInfo: [],
         shapes: [],
         codeSnippets: code.slide3,
@@ -117,8 +117,8 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Zawartość formularza',
-        content: '<label></label> Etykieta dla danego pola formularza.',
+        title: 'Zawartość formularza - label',
+        content: 'Etykieta dla danego pola formularza.',
         additionalInfo: [
           {
             id: '1',
@@ -156,8 +156,8 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Zawartość formularza',
-        content: '<input/> Pole do wpisania tekstu o wysokości jednego wiersza.',
+        title: 'Zawartość formularza - input',
+        content: 'Pole do wpisania tekstu o wysokości jednego wiersza.',
         additionalInfo: [
           {
             id: '1',
@@ -218,13 +218,13 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/double-arrow1.svg',
+            src: '', // dodać podwójną strzałkę
             width: 200,
-            height: 100,
+            height: 150,
             style: {
               top: '55%',
-              left: '60%',
-              transform: 'rotate(140deg)',
+              left: '50%',
+              transform: 'rotate(60deg)',
             },
           },
         ],
@@ -242,14 +242,13 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Zawartość formularza',
-        content: `<datalist><datalist/>
-        Lista możliwych wartości inputa, dodająca do niego autosugestie..`,
+        title: 'Zawartość formularza - datalist',
+        content: `Lista możliwych wartości inputa, dodająca do niego autosugestie..`,
         additionalInfo: [],
         shapes: [
           {
             number: '1',
-            src: 'static/double-arrow1.svg',
+            src: '', // dodać podwójną strzałkę
             width: 80,
             height: 80,
             style: {
@@ -273,9 +272,8 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Zawartość formularza',
-        content: `<select></select>
-        Lista rozwijana.`,
+        title: 'Zawartość formularza - select',
+        content: `Lista rozwijana.`,
         additionalInfo: [],
         shapes: [
           {
@@ -301,9 +299,8 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Zawartość formularza',
-        content: `<textarea></textarea>
-        Pole do wpisania dłuższego tekstu. Rozmiar pola może obejmować dowolną liczbę wierszy. `,
+        title: 'Zawartość formularza - textarea',
+        content: `Pole do wpisania dłuższego tekstu. Rozmiar pola może obejmować dowolną liczbę wierszy. `,
         additionalInfo: [],
         shapes: [
           {
@@ -329,9 +326,8 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Zawartość formularza',
-        content: `<button></button>
-        Przycisk.`,
+        title: 'Zawartość formularza - button',
+        content: `Przycisk.`,
         additionalInfo: [],
         shapes: [
           {
@@ -369,20 +365,10 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Zawartość formularza',
-        content: `<textarea></textarea>
-        Pole do wpisania dłuższego tekstu. Rozmiar pola możeobejmować dowolną liczbę wierszy. `,
+        title: 'Co zakodujemy - kod',
+        content: ``,
         additionalInfo: [],
-        shapes: [
-          {
-            number: '1',
-            src: '',
-            style: {
-              top: '0',
-              left: '0',
-            },
-          },
-        ],
+        shapes: [],
         codeSnippets: code.slide13,
         language: 'html',
         stylesObj: {
@@ -467,7 +453,7 @@ export default {
           {
             id: '1',
             text: 'Sprawia, że szerokość strony jest równa szerokości urządzenia.',
-            top: '40%',
+            top: '42%',
             left: '35%',
           },
           {
@@ -481,10 +467,10 @@ export default {
           {
             number: '1',
             src: 'static/arrow.svg',
-            width: 70,
-            height: 70,
+            width: 60,
+            height: 60,
             style: {
-              top: '50%',
+              top: '52%',
               left: '55%',
               transform: 'rotate(270deg)',
             },
@@ -548,7 +534,7 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/rectangular-outline.svg',
+            src: '', // dodać ramkę
             width: 400,
             height: 400,
             style: {
@@ -583,7 +569,7 @@ export default {
               left: '0',
             },
           },
-        ],
+        ], // dodać ramkę
         codeSnippets: code.slide19,
         language: 'css',
         stylesObj: {
@@ -610,7 +596,7 @@ export default {
               left: '0',
             },
           },
-        ],
+        ], // dodać ramkę
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
@@ -626,7 +612,7 @@ export default {
       },
       content: {
         title: 'media queries',
-        content: `Określa typ ekranu, na którym mają zostać zastosowane określonestyle. Możliwe wartości to:
+        content: `Określa typ ekranu, na którym mają zostać zastosowane określone style. Możliwe wartości to:
         all - wszystkie typy ekranu (ustawienie domyślne).
         print - drukarki (wygląd podaczas wydruku).
         screen - ekrany komputerów, tabletów, telefonów itp.
@@ -641,11 +627,13 @@ export default {
               left: '0',
             },
           },
-        ],
+        ], // dodać ramkę
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
           fontSize: 60,
+          position: 'absolute',
+          top: '50%',
         },
       },
     },
@@ -657,9 +645,9 @@ export default {
       },
       content: {
         title: 'media queries',
-        content: `W większości przypadków ustalanie typu ekranu nie będzie Cipotrzebne i możesz je pominąć. `,
+        content: `W większości przypadków ustalanie typu ekranu nie będzie Ci potrzebne i możesz je pominąć. `,
         additionalInfo: [],
-        shapes: [],
+        shapes: [], // dodać ramkę
         codeSnippets: code.slide24,
         language: 'css',
         stylesObj: {
@@ -678,7 +666,8 @@ export default {
       content: {
         title: 'media queries',
         content: `Tzw. spójnik logiczny. Pozwala na łączenie warunków.
-        Zastosuj style z klamr jeżeli użytkownik przedląda stronę naekranie oraz szerokość strony jest nie większa niż 680px. Aby stylezostały zastosowane muszą być spełnione oba warunki. `,
+        Zastosuj style z klamr, jeżeli użytkownik przedląda stronę na ekranie oraz szerokość strony jest nie większa niż 680px.
+        Aby style zostały zastosowane muszą być spełnione oba warunki. `,
         additionalInfo: [],
         shapes: [
           {
@@ -689,7 +678,7 @@ export default {
               left: '0',
             },
           },
-        ],
+        ], // dodać ramkę
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
@@ -706,7 +695,8 @@ export default {
       content: {
         title: 'media queries',
         content: `Tzw. spójnik logiczny. Pozwala na łączenie warunków.
-        Zastosuj style z klamr jeżeli użytkownik przedląda stronę naekranie lub szerokość strony jest nie większa niż 680px. Aby stylezostały zastosowane musi być spełniony co najmniej jeden zwarunków.`,
+        Zastosuj style z klamr, jeżeli użytkownik przegląda stronę na ekranie lub szerokość strony jest nie większa niż 680px.
+        Aby style zostały zastosowane musi być spełniony co najmniej jeden z warunków.`,
         additionalInfo: [],
         shapes: [
           {
@@ -717,7 +707,7 @@ export default {
               left: '0',
             },
           },
-        ],
+        ], // dodać ramkę
         codeSnippets: code.slide26,
         language: 'css',
         stylesObj: {
@@ -733,7 +723,11 @@ export default {
       },
       content: {
         title: 'media queries',
-        content: `Określa wymiary strony, przy których mają zostać zastosowaneokreślone style. Możliwe wartości to:max-width - o szerokości mniejszej lub równej. min-width - o szerokości większej lub równej.    max-height - o wysokości mniejszej lub równej.min-height - o wysokości większej lub równej.  `,
+        content: `Określa wymiary strony, przy których mają zostać zastosowane określone style. Możliwe wartości to:
+        max-width - o szerokości mniejszej lub równej.
+        min-width - o szerokości większej lub równej.
+        max-height - o wysokości mniejszej lub równej.
+        min-height - o wysokości większej lub równej. `,
         additionalInfo: [],
         shapes: [
           {
@@ -744,11 +738,13 @@ export default {
               left: '0',
             },
           },
-        ],
+        ], // dodać ramkę
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
           fontSize: 60,
+          position: 'absolute',
+          top: '50%',
         },
       },
     },
@@ -760,7 +756,7 @@ export default {
       },
       content: {
         title: 'media queries',
-        content: `Style, które mają zostać zastosowane, jeżeli spełniony zostałwcześniej opisany warunek.`,
+        content: `Style, które mają zostać zastosowane, jeżeli spełniony został wcześniej opisany warunek.`,
         additionalInfo: [],
         shapes: [
           {
@@ -771,11 +767,13 @@ export default {
               left: '0',
             },
           },
-        ],
+        ], // dodać ramkę
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
           fontSize: 60,
+          position: 'absolute',
+          top: '30%',
         },
       },
     },
@@ -806,7 +804,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        imageSrc: `https://res.cloudinary.com/hcdkt0ybc/image/upload/q_auto:eco/c_crop,h_400,w_1100,x_0,y_0/fl_lossy/f_auto/a_ignore/v1530026674/acecaf5d-7c24-4a5b-84b6-42fea424b6ec.gif`,
+        imageSrc: `static/gifs/relative-static-units.gif`,
       },
     },
     {
@@ -826,7 +824,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        imageSrc: `https://res.cloudinary.com/hcdkt0ybc/image/upload/q_auto:eco/c_crop,h_400,w_1100,x_0,y_0/fl_lossy/f_auto/a_ignore/v1530027579/7b713f96-cb3f-44aa-a9a5-9ccc16101502.gif`,
+        imageSrc: `static/gifs/breakpoints.gif`,
       },
     },
     {
@@ -1147,16 +1145,19 @@ export default {
     },
     {
       slide_id: '47',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'position: relative',
         content: `Po przesunięciu .box znajduje się w żółtej pozycji, jednak elementy otaczające go zachowują się tak, jakby nadal pozostawał w niebieskiej pozycji (stał w miejscu).`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz o przesunięciu diva o klasie .box
+        image: {
+          src: `static/images/position_relative.png`,
+          width: '600px',
+          top: '45%',
+          left: '55%',
+        },
         codeSnippets: code.slide47,
         language: 'css',
         stylesObj: {
@@ -1200,16 +1201,19 @@ export default {
     },
     {
       slide_id: '50',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'position: absolute',
         content: `Po przesunięciu .box-2 znajduje się w żółtej pozycji, jednak elementy otaczające go (.box-1) zachowują się tak, jakby nie istniał.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz o przesunięciu diva o klasie .box-1
+        image: {
+          src: `static/images/position_absolute.png`,
+          width: '500px',
+          top: '45%',
+          left: '55%',
+        },
         codeSnippets: code.slide50,
         language: 'css',
         stylesObj: {
@@ -1253,16 +1257,19 @@ export default {
     },
     {
       slide_id: '53',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'position: fixed',
         content: `Po przesunięciu .box znajduje się w żółtej pozycji, jednak elementy otaczające go zachowują się tak, jakby nie istniał.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz o przesunięciu diva o klasie .box!
+        image: {
+          src: `static/images/position_fixed.png`,
+          width: '500px',
+          top: '45%',
+          left: '55%',
+        },
         codeSnippets: code.slide53,
         language: 'css',
         stylesObj: {
@@ -1275,20 +1282,23 @@ export default {
     },
     {
       slide_id: '54',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'z-index',
         content: `Położenie elementu niestatycznego na osi Z. Określa "jak wysoko" znajdują się elementy.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać gif o z-index
+        image: {
+          src: `static/gifs/z-index.gif`,
+          width: '500px',
+          top: '40%',
+          left: '55%',
+        },
         codeSnippets: code.slide54,
         language: 'css',
         stylesObj: {
-          fontSize: 40,
+          fontSize: 50,
           position: 'absolute',
           top: '30%',
           left: '10%',
@@ -1313,7 +1323,7 @@ export default {
       },
       content: {
         image: '/static/z-index.png',
-        // poprawić style dla zdjęcia!
+        width: '300px', // zmienić wielkość obrazu
         title: 'z-index',
         link: '',
       },
@@ -1441,7 +1451,7 @@ export default {
       },
       content: {
         title: 'Użycie zmiennej',
-        content: `Zmiennej używamy korzystając ze składni var(x), gdzie x jestnazwą zmiennej.`,
+        content: `Zmiennej używamy korzystając ze składni var(x), gdzie x jest nazwą zmiennej.`,
         additionalInfo: [],
         shapes: [
           {
@@ -1484,7 +1494,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        image: '/static/css-grid.jpg',
+        image: '/static/images/css-grid.jpg',
         title: 'CSS grid',
         content: `Zestaw właściwości umożliwiających projektowanie dwuwymiarowych interfejsów.
         W wielu przypadkach stanowi ciekawą alternatywę dla stosowanego dotychczas flexboxa.`,
@@ -1492,6 +1502,414 @@ export default {
           marginTop: 'auto',
           marginBottom: 'auto',
         },
+      },
+    },
+    {
+      slide_id: '66',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Stworzenie grida',
+        content: `Dzięki zastosowaniu powyższej właściwości element stanie się tzw. container'em. Oznacza to że wszystkie bezpośrednie dzieci danego elementu zostaną dopasowne do siatki.`,
+        additionalInfo: [],
+        shapes: [
+          {
+            number: '1',
+            src: 'static/line-rectangle.svg', // zmienić ramkę
+            width: 400,
+            height: 200,
+            style: {
+              top: '53%',
+              left: '40%',
+            },
+          },
+        ],
+        // Dodać prostokąt wokół display:grid SVG
+        codeSnippets: code.slide66,
+        language: 'css',
+        stylesObj: {
+          fontSize: 60,
+          position: 'absolute',
+          top: '30%',
+          left: '30%',
+        },
+      },
+    },
+    {
+      slide_id: '67',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Odstępy między komórkami',
+        content: ``,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz o gridzie
+        codeSnippets: code.slide67,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '68',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Odstępy między komórkami',
+        content: `Określa odstęp pomiędzy wierszami.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz o gridzie i prostokąt wokół grid-row-gap
+        codeSnippets: code.slide67,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '69',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Odstępy między komórkami',
+        content: `Określa odstęp pomiędzy kolumnami.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz o gridzie i prostokąt wokół grid-column-gap
+        codeSnippets: code.slide67,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '70',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Odstępy między komórkami',
+        content: `Zapis skrócony. Pierwsza wartość definiuje odstęp międzywierszami, a druga między kolumnami. Jeżeli oba odstępy są identyczne, możemy zapisać tylko jedną wartość.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz o gridzie i prostokąt wokół grid-gap
+        codeSnippets: code.slide67,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '10%',
+        },
+      },
+    },
+    {
+      slide_id: '71',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Tworzenie siatki',
+        content: ``,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz
+        codeSnippets: code.slide68,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '50%',
+        },
+      },
+    },
+    {
+      slide_id: '72',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Tworzenie siatki',
+        content: `Wymiary każdej z kolumn.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać prostokąt i obraz
+        codeSnippets: code.slide68,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '50%',
+        },
+      },
+    },
+    {
+      slide_id: '73',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Tworzenie siatki',
+        content: `Jednostka oznaczająca "ilość pozostałego miejsca". W tym przypadku będzie równa wielkości elementu po odjęciu 120px.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać prostokąt i obraz
+        codeSnippets: code.slide68,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '50%',
+        },
+      },
+    },
+    {
+      slide_id: '74',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Tworzenie siatki',
+        content: `Wymiary każdego z wierszy.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać prostokąt i obraz
+        codeSnippets: code.slide68,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '25%',
+          left: '50%',
+        },
+      },
+    },
+    {
+      slide_id: '75',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Tworzenie siatki',
+        content: `Jeśli nie określimy liczby i wielkości wierszy, powstanie ich tyle, aby grid pomieścił wszystkie swoje dzieci. Wysokość każdego wiersza będzie równa wysokości najwyższego dziecka w tym wierszu.`,
+        additionalInfo: [],
+        shapes: [],
+        // dodać skreślenie
+        codeSnippets: code.slide68,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '30%',
+          left: '30%',
+        },
+      },
+    },
+    {
+      slide_id: '76',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Rozłożenie elementów na siatce',
+        content: ``,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz
+        codeSnippets: code.slide76,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '20%',
+          left: '50%',
+        },
+      },
+    },
+    {
+      slide_id: '77',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Rozłożenie elementów na siatce',
+        content: ``,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz
+        codeSnippets: code.slide77,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '20%',
+          left: '50%',
+        },
+      },
+    },
+    {
+      slide_id: '78',
+      template: 'Code',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Rozłożenie elementów na siatce',
+        content: ``,
+        additionalInfo: [],
+        shapes: [],
+        // dodać obraz
+        codeSnippets: code.slide78,
+        language: 'css',
+        stylesObj: {
+          fontSize: 40,
+          position: 'absolute',
+          top: '20%',
+          left: '50%',
+        },
+      },
+    },
+    {
+      slide_id: '79',
+      template: 'SectionHeader',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        title: 'Co dalej?',
+      },
+    },
+    {
+      slide_id: '80',
+      template: 'ImageDescription2',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        // zmienić obrazy
+        title: 'Frameworki CSS',
+        content: `Zestaw gotowych styli CSS (czasami także skryptów JSowych), pozwalających na efektywne tworzenie stron z wykorzystaniempredefiniowanych klas.`,
+        stylesObj: {
+          marginTop: 'auto',
+          marginBottom: 'auto',
+        },
+      },
+    },
+    {
+      slide_id: '81',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://semantic-ui.com/',
+      },
+    },
+    {
+      slide_id: '82',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/pZpQOZ',
+      },
+    },
+    {
+      slide_id: '83',
+      template: 'ImageDescription2',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        // zmienić obrazy
+        title: 'Preprocesory',
+        content: `Języki stworzone na bazie CSS, celu ułatwienia pracy z tym językiem. Do działania wymagają transpilatora, który przetłumaczy je do zwykłego CSSa.`,
+        stylesObj: {
+          marginTop: 'auto',
+          marginBottom: 'auto',
+        },
+      },
+    },
+    {
+      slide_id: '84',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/rrpQbg',
+      },
+    },
+    {
+      slide_id: '85',
+      template: 'ImageDescription2',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        // zmienić obrazy
+        title: 'Wykorzystania możliwości CSSa',
+        content: `W internecie i książkach odnaleźć można setki możliwości wykorzystania właściwości CSSa.`,
+        stylesObj: {
+          marginTop: 'auto',
+          marginBottom: 'auto',
+        },
+      },
+    },
+    {
+      slide_id: '86',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/xJpmLO',
+      },
+    },
+    {
+      slide_id: '87',
+      template: 'IFrame',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/PBEXRB',
       },
     },
   ],

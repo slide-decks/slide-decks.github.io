@@ -25,7 +25,7 @@ const Middle = styled.div`
 `;
 
 const Image = styled.a`
-  width: auto;
+  width: '${props => props.width}';
   height: auto;
   min-width: 864px;
   min-height: 648px;
@@ -34,19 +34,20 @@ const Image = styled.a`
   border-radius: 8px;
 `;
 
-const ImageDescription3 = ({ title, image, styles, link }) => (
+const ImageDescription3 = ({ title, image, styles, link, width }) => (
   <Container styles={styles} className="image-description3">
     <Header>
       <LineHeader alignSelf="center">{title}</LineHeader>
     </Header>
     <Middle className="middle">
-      <Image src={image} className="image-link" href={link} target="_blank" />
+      <Image src={image} className="image-link" href={link} target="_blank" width={width}/>
     </Middle>
   </Container>
 );
 
 ImageDescription3.propTypes = {
   image: string.isRequired,
+  width: string,
   title: string.isRequired,
   link: string,
   styles: arrayOf(string),

@@ -51,28 +51,24 @@ export default {
   slide11: [
     {
       id: '1',
-      content: `<!-- Przycisk bez dodatkowych właściwości -->
-      <button type="button">Normalny<button>
-
-      <!-- Przycisk Powodujący wysłanie formularza -->
-      <button type="submit">Wyślij<button>
-
-      <!-- Przycisk resetujący wszystkie pola formularza -->
-      <button type="reset">Resetuj<button>`,
+      content: `
+      <!-- Przycisk bez dodatkowych właściwości -->\n<button type="button">Normalny<button>
+      \n<!-- Przycisk Powodujący wysłanie formularza -->\n<button type="submit">Wyślij<button>
+      \n<!-- Przycisk resetujący wszystkie pola formularza -->\n<button type="reset">Resetuj<button>`,
     },
   ],
   slide13: [
     {
       id: '1',
-      content: `<form action="" method="post" enctype="text/plain">
-      <input type="text" placeholder="USERNAME" name="username" required>
+      content: `
+        <form action="" method="post" enctype="text/plain">
+        <input type="text" placeholder="USERNAME" name="username" required>
         <input type="email" placeholder="EMAIL" name="email" required>
         <input type="password" placeholder="PASSWORD" name="password" required>
         <div class="size-xs">
           By creating an account you agree to our <a href="#">Terms/Privacy</a>
         </div>
-        <button type="submit">CREATE ACCOUNT</button>
-    </form>`,
+        <button type="submit">CREATE ACCOUNT</button>\n\t</form>`,
     },
   ],
   slide17: [
@@ -170,6 +166,42 @@ export default {
     {
       id: '1',
       content: `:root {\n\t--primaryColor: #f23d12;\n}\n.element {\n\tcolor: var(--primaryColor);\n}`,
+    },
+  ],
+  slide66: [
+    {
+      id: '1',
+      content: `.element {\n\tdisplay: grid;\n}`,
+    },
+  ],
+  slide67: [
+    {
+      id: '1',
+      content: `.element {\n\tdisplay: grid;\n\tgrid-row-gap: 20px;\n\tgrid-column-gap: 60px\n\tgrid-gap: 20px 60px;\n}`,
+    },
+  ],
+  slide68: [
+    {
+      id: '1',
+      content: `.element {\n\tdisplay: grid;\n\tgrid-gap: 20px;\n\tgrid-template-columns: 100px 1fr;\n\tgrid-template-rows: 1fr 2fr;\n}`,
+    },
+  ],
+  slide76: [
+    {
+      id: '1',
+      content: `.element { display: grid; ...}\n\n.child1 {\n\tgrid-column-start: 1;\n\tgrid-row-start: 2;\n\tgrid-column-end:3\n\tgrid-row-end: 4;\n}`,
+    },
+  ],
+  slide77: [
+    {
+      id: '1',
+      content: `.element { display: grid; }\n\n.child1 {\n\tgrid-column: 1/3;\n\tgrid-row: 2/4;\n}`,
+    },
+  ],
+  slide78: [
+    {
+      id: '1',
+      content: `.element { display: grid; }\n\n.child1 {\n\tgrid-area: 2/1/4/3;\n}`,
     },
   ],
 };

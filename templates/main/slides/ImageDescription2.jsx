@@ -46,7 +46,9 @@ const ImageDescription2 = ({ title, image, content, styles, stylesObj }) => (
     </Header>
     <Middle className="middle">
       <Image src={image} className="image" />
-      <Content className="content" style={stylesObj}>{renderContent(content)}</Content>
+      <Content className="content" style={stylesObj}>
+        {renderContent(content)}
+      </Content>
     </Middle>
   </Container>
 );

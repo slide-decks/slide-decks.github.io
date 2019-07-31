@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { string, arrayOf, object, exact, number } from 'prop-types';
+import { string, arrayOf, object, exact } from 'prop-types';
 import { Prism } from 'react-syntax-highlighter';
 import { atomDark, atomDefault } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { BoxHeading, LineHeader, Shape } from '../components';
+import { BoxHeading, LineHeader } from '../components';
 import ThemeContext from '../components/ThemeContext';
 import { renderContent } from '../utils';
 
@@ -28,14 +28,15 @@ const Content = styled.div`
   height: 100%;
 `;
 
-const AdditionalInfo = styled.div`
+const Img = styled.img`
+  width: '${props => props.width}';
+  height: auto;
+  margin: auto;
   position: absolute;
-  text-align: center;
-  font-size: var(--size-sm);
-  max-width: 40%;
+  background: url('${props => props.src}') no-repeat center/cover;
 `;
 
-const Code = ({ title, content, additionalInfo, shapes, codeSnippets, styles, language, stylesObj }) => {
+const Code1 = ({ title, content, codeSnippets, image, styles, language, stylesObj }) => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -54,46 +55,16 @@ const Code = ({ title, content, additionalInfo, shapes, codeSnippets, styles, la
             </Prism>
           ))}
         </Content>
-        {additionalInfo.map(info => (
-          <AdditionalInfo key={info.id} style={{ top: `${info.top}`, left: `${info.left}` }}>
-            {renderContent(info.text)}
-          </AdditionalInfo>
-        ))}
-        {shapes.map(shape => (
-          <Shape
-            key={shape.number}
-            src={shape.src}
-            width={shape.width}
-            height={shape.height}
-            fill="var(--primary)"
-            style={shape.style}
-          />
-        ))}
+        <Img src={image.src} style={{ top: `${image.top}`, left: `${image.left}` }} width={image.width} />
       </BoxHeading>
     </Container>
   );
 };
 
-Code.propTypes = {
+Code1.propTypes = {
   title: string,
   content: string,
-  additionalInfo: arrayOf(
-    exact({
-      id: string,
-      text: string,
-      top: string,
-      left: string,
-    }),
-  ),
-  shapes: arrayOf(
-    exact({
-      number: string,
-      width: number,
-      height: number,
-      src: string,
-      style: object,
-    }),
-  ),
+  image: object,
   codeSnippets: arrayOf(
     exact({
       id: string,
@@ -105,8 +76,8 @@ Code.propTypes = {
   styles: arrayOf(string),
 };
 
-Code.defaultProps = {
+Code1.defaultProps = {
   stylesObj: {},
 };
 
-export default Code;
+export default Code1;

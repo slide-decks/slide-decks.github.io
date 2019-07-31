@@ -14,6 +14,7 @@ import Pineapple2 from './Pineapple2';
 import Card from './Card';
 import Percentages from './Percentages';
 import Code from './Code';
+import Code1 from './Code1';
 import CodeSandbox from './CodeSandbox';
 import SocialMedia from './SocialMedia';
 import Funnel from './Funnel';
@@ -38,6 +39,7 @@ export default {
   Card,
   Percentages,
   Code,
+  Code1,
   CodeSandbox,
   SocialMedia,
   Funnel,
