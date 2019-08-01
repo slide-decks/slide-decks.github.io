@@ -1539,16 +1539,19 @@ export default {
     },
     {
       slide_id: '67',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Odstępy między komórkami',
         content: ``,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz o gridzie
+        image: {
+          src: `static/images/grid.png`,
+          width: '600px',
+          top: '40%',
+          left: '55%',
+        },
         codeSnippets: code.slide67,
         language: 'css',
         stylesObj: {
@@ -1561,16 +1564,19 @@ export default {
     },
     {
       slide_id: '68',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Odstępy między komórkami',
         content: `Określa odstęp pomiędzy wierszami.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz o gridzie i prostokąt wokół grid-row-gap
+        image: {
+          src: `static/images/grid-row-gap.png`,
+          width: '600px',
+          top: '40%',
+          left: '55%',
+        },
         codeSnippets: code.slide67,
         language: 'css',
         stylesObj: {
@@ -1583,16 +1589,19 @@ export default {
     },
     {
       slide_id: '69',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Odstępy między komórkami',
         content: `Określa odstęp pomiędzy kolumnami.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz o gridzie i prostokąt wokół grid-column-gap
+        image: {
+          src: `static/images/grid-column-gap.png`,
+          width: '600px',
+          top: '40%',
+          left: '55%',
+        },
         codeSnippets: code.slide67,
         language: 'css',
         stylesObj: {
@@ -1605,16 +1614,19 @@ export default {
     },
     {
       slide_id: '70',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Odstępy między komórkami',
         content: `Zapis skrócony. Pierwsza wartość definiuje odstęp międzywierszami, a druga między kolumnami. Jeżeli oba odstępy są identyczne, możemy zapisać tylko jedną wartość.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz o gridzie i prostokąt wokół grid-gap
+        image: {
+          src: `static/images/grid-gap.png`,
+          width: '600px',
+          top: '40%',
+          left: '55%',
+        },
         codeSnippets: code.slide67,
         language: 'css',
         stylesObj: {
@@ -1627,16 +1639,19 @@ export default {
     },
     {
       slide_id: '71',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Tworzenie siatki',
         content: ``,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz
+        image: {
+          src: `static/images/grid-template.png`,
+          width: '600px',
+          top: '40%',
+          left: '10%',
+        },
         codeSnippets: code.slide68,
         language: 'css',
         stylesObj: {
@@ -1649,16 +1664,19 @@ export default {
     },
     {
       slide_id: '72',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Tworzenie siatki',
         content: `Wymiary każdej z kolumn.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać prostokąt i obraz
+        image: {
+          src: `static/images/grid-template.png`,
+          width: '600px',
+          top: '40%',
+          left: '10%',
+        },
         codeSnippets: code.slide68,
         language: 'css',
         stylesObj: {
@@ -1671,16 +1689,19 @@ export default {
     },
     {
       slide_id: '73',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Tworzenie siatki',
         content: `Jednostka oznaczająca "ilość pozostałego miejsca". W tym przypadku będzie równa wielkości elementu po odjęciu 120px.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać prostokąt i obraz
+        image: {
+          src: `static/images/grid-template.png`,
+          width: '600px',
+          top: '40%',
+          left: '10%',
+        },
         codeSnippets: code.slide68,
         language: 'css',
         stylesObj: {
@@ -1693,16 +1714,19 @@ export default {
     },
     {
       slide_id: '74',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Tworzenie siatki',
         content: `Wymiary każdego z wierszy.`,
-        additionalInfo: [],
-        shapes: [],
-        // dodać prostokąt i obraz
+        image: {
+          src: `static/images/grid-template.png`,
+          width: '600px',
+          top: '40%',
+          left: '10%',
+        },
         codeSnippets: code.slide68,
         language: 'css',
         stylesObj: {
@@ -1737,16 +1761,19 @@ export default {
     },
     {
       slide_id: '76',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Rozłożenie elementów na siatce',
         content: ``,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz
+        image: {
+          src: `static/images/grid-template1.png`,
+          width: '600px',
+          top: '35%',
+          left: '10%',
+        },
         codeSnippets: code.slide76,
         language: 'css',
         stylesObj: {
@@ -1759,16 +1786,19 @@ export default {
     },
     {
       slide_id: '77',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Rozłożenie elementów na siatce',
         content: ``,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz
+        image: {
+          src: `static/images/grid-template1.png`,
+          width: '600px',
+          top: '35%',
+          left: '10%',
+        },
         codeSnippets: code.slide77,
         language: 'css',
         stylesObj: {
@@ -1781,16 +1811,19 @@ export default {
     },
     {
       slide_id: '78',
-      template: 'Code',
+      template: 'Code1',
       animation: {
         type: 'horizontal',
       },
       content: {
         title: 'Rozłożenie elementów na siatce',
         content: ``,
-        additionalInfo: [],
-        shapes: [],
-        // dodać obraz
+        image: {
+          src: `static/images/grid-template1.png`,
+          width: '600px',
+          top: '35%',
+          left: '10%',
+        },
         codeSnippets: code.slide78,
         language: 'css',
         stylesObj: {
@@ -1813,19 +1846,41 @@ export default {
     },
     {
       slide_id: '80',
-      template: 'ImageDescription2',
+      template: 'ImagesDescription',
       animation: {
         type: 'horizontal',
       },
       content: {
-        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        images: [
+          {
+            id: '1',
+            src: 'static/images/foundation_logo.png',
+            link: 'https://foundation.zurb.com/',
+            width: '200px',
+          },
+          {
+            id: '2',
+            src: 'static/images/bulma_logo.png',
+            link: 'https://bulma.io/',
+            width: '300px',
+          },
+          {
+            id: '3',
+            src: 'static/images/bootstrap_logo.png',
+            link: 'https://getbootstrap.com/',
+            width: '300px',
+          },
+          {
+            id: '4',
+            src: 'static/images/semantic_logo.png',
+            link: 'https://semantic-ui.com/',
+            width: '300px',
+          },
+        ],
         // zmienić obrazy
         title: 'Frameworki CSS',
-        content: `Zestaw gotowych styli CSS (czasami także skryptów JSowych), pozwalających na efektywne tworzenie stron z wykorzystaniempredefiniowanych klas.`,
-        stylesObj: {
-          marginTop: 'auto',
-          marginBottom: 'auto',
-        },
+        content: `Zestaw gotowych styli CSS (czasami także skryptów JSowych), pozwalających na efektywne tworzenie stron z wykorzystaniem predefiniowanych klas.`,
+        stylesObj: {},
       },
     },
     {
@@ -1850,19 +1905,34 @@ export default {
     },
     {
       slide_id: '83',
-      template: 'ImageDescription2',
+      template: 'ImagesDescription',
       animation: {
         type: 'horizontal',
       },
       content: {
-        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
-        // zmienić obrazy
+        images: [
+          {
+            id: '1',
+            src: 'static/images/less_logo.png',
+            link: 'http://lesscss.org/',
+            width: '450px',
+          },
+          {
+            id: '2',
+            src: 'static/images/sass_logo.png',
+            link: 'https://sass-lang.com/',
+            width: '350px',
+          },
+          {
+            id: '3',
+            src: 'static/images/stylus_logo.png',
+            link: 'http://stylus-lang.com/',
+            width: '350px',
+          },
+        ],
         title: 'Preprocesory',
-        content: `Języki stworzone na bazie CSS, celu ułatwienia pracy z tym językiem. Do działania wymagają transpilatora, który przetłumaczy je do zwykłego CSSa.`,
-        stylesObj: {
-          marginTop: 'auto',
-          marginBottom: 'auto',
-        },
+        content: `Języki stworzone na bazie CSS, w celu ułatwienia pracy z tym językiem. Do działania wymagają transpilatora, który przetłumaczy je do zwykłego CSSa.`,
+        stylesObj: {},
       },
     },
     {
@@ -1877,19 +1947,34 @@ export default {
     },
     {
       slide_id: '85',
-      template: 'ImageDescription2',
+      template: 'ImagesDescription',
       animation: {
         type: 'horizontal',
       },
       content: {
-        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
-        // zmienić obrazy
+        images: [
+          {
+            id: '1',
+            src: 'static/images/css_bez_tajemnic.jpg',
+            link: `https://helion.pl/ksiazki/css-bez-tajemnic-47-sekretow-kreatywnego-projektanta-lea-verou,scss47.htm#format/d`,
+            width: '350px',
+          },
+          {
+            id: '2',
+            src: 'static/images/css_tricks.png',
+            link: 'https://css-tricks.com/',
+            width: '400px',
+          },
+          {
+            id: '3',
+            src: 'static/images/medium_logo.png',
+            link: `https://medium.com/@peedutuisk/lesser-known-css-quirks-oddities-and-advanced-tips-css-is-awesome-8ee3d16295bb`,
+            width: '400px',
+          },
+        ],
         title: 'Wykorzystania możliwości CSSa',
         content: `W internecie i książkach odnaleźć można setki możliwości wykorzystania właściwości CSSa.`,
-        stylesObj: {
-          marginTop: 'auto',
-          marginBottom: 'auto',
-        },
+        stylesObj: {},
       },
     },
     {
@@ -1910,6 +1995,16 @@ export default {
       },
       content: {
         sourceUrl: 'https://codepen.io/KonradSzwarc/pen/PBEXRB',
+      },
+    },
+    {
+      slide_id: '88',
+      template: 'Finish',
+      animation: {
+        type: 'horizontal',
+      },
+      content: {
+        image: '/static/images/finish.png',
       },
     },
   ],

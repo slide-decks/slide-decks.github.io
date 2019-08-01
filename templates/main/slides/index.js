@@ -2,6 +2,7 @@ import Title from './Title';
 import ImageDescription from './ImageDescription';
 import ImageDescription2 from './ImageDescription2';
 import ImageDescription3 from './ImageDescription3';
+import ImagesDescription from './ImagesDescription';
 import Services from './Services';
 import Services2 from './Services2';
 import Timeline from './Timeline';
@@ -21,12 +22,14 @@ import Funnel from './Funnel';
 import SectionHeader from './SectionHeader';
 import IFrame from './IFrame';
 import Image from './Image';
+import Finish from './Finish';
 
 export default {
   Title,
   ImageDescription,
   ImageDescription2,
   ImageDescription3,
+  ImagesDescription,
   Services,
   Services2,
   Timeline,
@@ -46,4 +49,5 @@ export default {
   SectionHeader,
   IFrame,
   Image,
+  Finish,
 };
