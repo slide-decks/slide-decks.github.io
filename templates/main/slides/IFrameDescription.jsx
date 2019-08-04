@@ -41,6 +41,13 @@ const FrameContainer = styled.div`
   flex-direction: column;
 `;
 
+const Frame = styled.iframe`
+  width: 864px;
+  height: 648px;
+  min-width: 864px;
+  min-height: 648px;
+`;
+
 const IFrameDecription = ({ title, content, styles, stylesObj, sourceUrl }) => (
   <Container styles={styles} className="image-description2">
     <Header>
@@ -48,10 +55,11 @@ const IFrameDecription = ({ title, content, styles, stylesObj, sourceUrl }) => (
     </Header>
     <Middle className="middle">
       <FrameContainer>
-        <Link href={sourceUrl} target="_blank">
-          Code Pen
-        </Link>
-        <IFrame src={sourceUrl} />
+        <Frame
+          title="code-sandbox"
+          src={sourceUrl}
+          sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+        />
       </FrameContainer>
       <Content className="content" style={stylesObj}>
         {renderContent(content)}

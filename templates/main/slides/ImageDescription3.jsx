@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { string, arrayOf } from 'prop-types';
+import { string, arrayOf, number } from 'prop-types';
 import { LineHeader } from '../components';
 
 const Container = styled.div`
@@ -20,18 +20,13 @@ const Header = styled.div`
 
 const Middle = styled.div`
   display: flex;
-  flex-direction: center;
+  justify-content: center;
   width: 100%;
 `;
 
-const Image = styled.a`
-  width: '${props => props.width}';
+const Image = styled.img`
+  width: '${props => props.width}'px;
   height: auto;
-  min-width: 864px;
-  min-height: 648px;
-  margin: auto;
-  background: url('${props => props.src}') no-repeat center/cover;
-  border-radius: 8px;
 `;
 
 const ImageDescription3 = ({ title, image, styles, link, width }) => (
@@ -40,14 +35,20 @@ const ImageDescription3 = ({ title, image, styles, link, width }) => (
       <LineHeader alignSelf="center">{title}</LineHeader>
     </Header>
     <Middle className="middle">
-      <Image src={image} className="image-link" href={link} target="_blank" width={width}/>
+      {link ? (
+        <a href={link} target="_blank" >
+          <Image src={image} className="image-link" width={width} />
+        </a>
+      ) : (
+        <Image src={image} className="image-link" width={width} />
+      )}
     </Middle>
   </Container>
 );
 
 ImageDescription3.propTypes = {
   image: string.isRequired,
-  width: string,
+  width: number,
   title: string.isRequired,
   link: string,
   styles: arrayOf(string),

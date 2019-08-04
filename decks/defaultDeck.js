@@ -6,9 +6,9 @@ const timelineNoContent = css`
     color: transparent;
   }
 `;
-const rectangle = 'static/Rectangle-thin.svg';
-const rectangle1 = 'static/Rectangle-thick.svg';
-const arrow = 'static/arrow.svg';
+
+const arrow = 'static/arrow3.svg';
+const doubleArrow = 'static/double_arrow.svg';
 
 export default {
   slides: [
@@ -221,13 +221,13 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '', // dodać podwójną strzałkę
-            width: 200,
-            height: 150,
+            src: doubleArrow,
+            width: 250,
+            height: 250,
             style: {
-              top: '55%',
-              left: '50%',
-              transform: 'rotate(60deg)',
+              top: '49%',
+              left: '53%',
+              transform: 'rotate(150deg)',
             },
           },
         ],
@@ -251,13 +251,13 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '', // dodać podwójną strzałkę
-            width: 80,
+            src: doubleArrow,
+            width: 150,
             height: 80,
             style: {
-              top: '47%',
-              left: '53%',
-              transform: 'rotate(155deg)',
+              top: '46%',
+              left: '51%',
+              transform: 'rotate(160deg)',
             },
           },
         ],
@@ -359,6 +359,7 @@ export default {
         image: '/static/mockup.png',
         title: 'Co zakodujemy - mockup',
         link: 'https://www.figma.com/file/BDpg9TcboEBXlmmlevMd8h/Untitled-(Copy)?node-id=13%3A21',
+        width: 1100,
       },
     },
     {
@@ -862,7 +863,6 @@ export default {
       animation: {
         type: 'horizontal',
       },
-      // Dodać iFrame z Codepen!!!!!!!!
       content: {
         sourceUrl: 'https://codepen.io/KonradSzwarc/pen/MXqPNE',
         title: 'Pseudoklasa',
@@ -962,13 +962,12 @@ export default {
     },
     {
       slide_id: '39',
-      template: 'ImageDescription2',
+      template: 'IFrameDescription',
       animation: {
         type: 'horizontal',
       },
-      // Dodać iFrame z Codepen!!!!!!!!
       content: {
-        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/ZRMqRy',
         title: 'Pseudoelement',
         content: `Pozwalają odnieść się do specjalnychelementów struktury dokumentu orazutomatycznie generować pewnązawartość w określonych miejscach.
         Pseudoelementy zawsze zaczynamy podwójnym dwukropkiem.`,
@@ -1336,9 +1335,8 @@ export default {
       },
       content: {
         image: '/static/z-index.png',
-        width: '300px', // zmienić wielkość obrazu
         title: 'z-index',
-        link: '',
+        width: 450,
       },
     },
     {
