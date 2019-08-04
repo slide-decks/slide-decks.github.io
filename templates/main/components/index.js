@@ -6,3 +6,5 @@ export CircularPercent from './CircularPercent';
 export Panel from './Panel';
 export ProgressBar from './ProgressBar';
 export Shape from './Shape';
+export IFrame from './IFrame';
+export Rectangle from './Rectangle';

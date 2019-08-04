@@ -177,10 +177,10 @@ export default {
   slide67: [
     {
       id: '1',
-      content: `.element {\n\tdisplay: grid;\n\tgrid-row-gap: 20px;\n\tgrid-column-gap: 60px\n\tgrid-gap: 20px 60px;\n}`,
+      content: `.element {\n\tdisplay: grid;\n\tgrid-row-gap: 20px;\n\tgrid-column-gap: 60px;\n\tgrid-gap: 20px 60px;\n}`,
     },
   ],
-  slide68: [
+  slide71: [
     {
       id: '1',
       content: `.element {\n\tdisplay: grid;\n\tgrid-gap: 20px;\n\tgrid-template-columns: 100px 1fr;\n\tgrid-template-rows: 1fr 2fr;\n}`,

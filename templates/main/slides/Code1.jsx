@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { string, arrayOf, object, exact } from 'prop-types';
+import { string, arrayOf, object, exact, number } from 'prop-types';
 import { Prism } from 'react-syntax-highlighter';
 import { atomDark, atomDefault } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { BoxHeading, LineHeader } from '../components';
+import { BoxHeading, LineHeader, Shape, Rectangle } from '../components';
 import ThemeContext from '../components/ThemeContext';
 import { renderContent } from '../utils';
 
@@ -36,7 +36,7 @@ const Img = styled.img`
   background: url('${props => props.src}') no-repeat center/cover;
 `;
 
-const Code1 = ({ title, content, codeSnippets, image, styles, language, stylesObj }) => {
+const Code1 = ({ title, content, codeSnippets, image, shapes, styles, language, stylesObj }) => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -56,6 +56,26 @@ const Code1 = ({ title, content, codeSnippets, image, styles, language, stylesOb
           ))}
         </Content>
         <Img src={image.src} style={{ top: `${image.top}`, left: `${image.left}` }} width={image.width} />
+        {shapes.map(shape =>
+          shape.src ? (
+            <Shape
+              key={shape.number}
+              src={shape.src}
+              width={shape.width}
+              height={shape.height}
+              fill="var(--primary)"
+              style={shape.style}
+            />
+          ) : (
+            <Rectangle
+              key={shape.number}
+              width={shape.width}
+              height={shape.height}
+              fill="var(--primary)"
+              style={shape.style}
+            />
+          ),
+        )}
       </BoxHeading>
     </Container>
   );
@@ -65,6 +85,15 @@ Code1.propTypes = {
   title: string,
   content: string,
   image: object,
+  shapes: arrayOf(
+    exact({
+      number: string,
+      width: number,
+      height: number,
+      src: string,
+      style: object,
+    }),
+  ),
   codeSnippets: arrayOf(
     exact({
       id: string,

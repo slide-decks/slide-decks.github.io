@@ -2,7 +2,6 @@ import React from 'react';
 import { string, oneOfType, number } from 'prop-types';
 import SVG from 'react-inlinesvg';
 import styled from 'styled-components';
-import classnames from 'classnames';
 
 const getMeasure = num => (typeof num === 'number' ? `${num}px` : num);
 
@@ -18,7 +17,7 @@ const StyledSVG = styled(SVG)`
 `;
 
 const Shape = props => {
-  return <StyledSVG {...props} className={classnames('icon', props.className)} />;
+  return <StyledSVG {...props} className={props.className} />;
 };
 
 Shape.propTypes = {

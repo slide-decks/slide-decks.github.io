@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { string, arrayOf, object, exact, number } from 'prop-types';
 import { Prism } from 'react-syntax-highlighter';
 import { atomDark, atomDefault } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { BoxHeading, LineHeader, Shape } from '../components';
+import { BoxHeading, LineHeader, Shape, Rectangle } from '../components';
 import ThemeContext from '../components/ThemeContext';
 import { renderContent } from '../utils';
 
@@ -59,16 +59,26 @@ const Code = ({ title, content, additionalInfo, shapes, codeSnippets, styles, la
             {renderContent(info.text)}
           </AdditionalInfo>
         ))}
-        {shapes.map(shape => (
-          <Shape
-            key={shape.number}
-            src={shape.src}
-            width={shape.width}
-            height={shape.height}
-            fill="var(--primary)"
-            style={shape.style}
-          />
-        ))}
+        {shapes.map(shape =>
+          shape.src ? (
+            <Shape
+              key={shape.number}
+              src={shape.src}
+              width={shape.width}
+              height={shape.height}
+              fill="var(--primary)"
+              style={shape.style}
+            />
+          ) : (
+            <Rectangle
+              key={shape.number}
+              width={shape.width}
+              height={shape.height}
+              fill="var(--primary)"
+              style={shape.style}
+            />
+          ),
+        )}
       </BoxHeading>
     </Container>
   );

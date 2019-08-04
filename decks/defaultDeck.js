@@ -6,6 +6,9 @@ const timelineNoContent = css`
     color: transparent;
   }
 `;
+const rectangle = 'static/Rectangle-thin.svg';
+const rectangle1 = 'static/Rectangle-thick.svg';
+const arrow = 'static/arrow.svg';
 
 export default {
   slides: [
@@ -130,7 +133,7 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 100,
             height: 100,
             style: {
@@ -175,7 +178,7 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 100,
             height: 100,
             style: {
@@ -186,7 +189,7 @@ export default {
           },
           {
             number: '2',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 100,
             height: 100,
             style: {
@@ -466,7 +469,7 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 60,
             height: 60,
             style: {
@@ -477,7 +480,7 @@ export default {
           },
           {
             number: '2',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 70,
             height: 70,
             style: {
@@ -529,16 +532,15 @@ export default {
       },
       content: {
         title: 'media queries',
-        content: `Domyślnie wszystko w elemencie o klasie container będzie miało font owielkości 16px. `,
+        content: `Domyślnie wszystko w elemencie o klasie container będzie miało font o wielkości 16px. `,
         additionalInfo: [],
         shapes: [
           {
             number: '1',
-            src: '', // dodać ramkę
-            width: 400,
-            height: 400,
+            width: 410,
+            height: 200,
             style: {
-              top: '28%',
+              top: '38%',
               left: '30%',
             },
           },
@@ -563,13 +565,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '',
+            width: 800,
+            height: 300,
             style: {
-              top: '0',
-              left: '0',
+              top: '55%',
+              left: '30%',
             },
           },
-        ], // dodać ramkę
+        ],
         codeSnippets: code.slide19,
         language: 'css',
         stylesObj: {
@@ -590,13 +593,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '',
+            width: 200,
+            height: 100,
             style: {
-              top: '0',
-              left: '0',
+              top: '55%',
+              left: '19%',
             },
           },
-        ], // dodać ramkę
+        ],
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
@@ -621,13 +625,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '',
+            width: 200,
+            height: 100,
             style: {
-              top: '0',
-              left: '0',
+              top: '68%',
+              left: '26%',
             },
           },
-        ], // dodać ramkę
+        ],
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
@@ -647,7 +652,7 @@ export default {
         title: 'media queries',
         content: `W większości przypadków ustalanie typu ekranu nie będzie Ci potrzebne i możesz je pominąć. `,
         additionalInfo: [],
-        shapes: [], // dodać ramkę
+        shapes: [],
         codeSnippets: code.slide24,
         language: 'css',
         stylesObj: {
@@ -672,13 +677,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '',
+            width: 120,
+            height: 100,
             style: {
-              top: '0',
-              left: '0',
+              top: '55%',
+              left: '37.5%',
             },
           },
-        ], // dodać ramkę
+        ],
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
@@ -701,13 +707,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '',
+            width: 30,
+            height: 100,
             style: {
-              top: '0',
-              left: '0',
+              top: '55%',
+              left: '39%',
             },
           },
-        ], // dodać ramkę
+        ],
         codeSnippets: code.slide26,
         language: 'css',
         stylesObj: {
@@ -732,13 +739,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '',
+            width: 600,
+            height: 100,
             style: {
-              top: '0',
-              left: '0',
+              top: '68%',
+              left: '45%',
             },
           },
-        ], // dodać ramkę
+        ],
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
@@ -761,13 +769,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: '',
+            width: 200,
+            height: 100,
             style: {
-              top: '0',
-              left: '0',
+              top: '48%',
+              left: '76.5%',
             },
           },
-        ], // dodać ramkę
+        ],
         codeSnippets: code.slide22,
         language: 'css',
         stylesObj: {
@@ -849,13 +858,13 @@ export default {
     },
     {
       slide_id: '36',
-      template: 'ImageDescription2',
+      template: 'IFrameDescription',
       animation: {
         type: 'horizontal',
       },
       // Dodać iFrame z Codepen!!!!!!!!
       content: {
-        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        sourceUrl: 'https://codepen.io/KonradSzwarc/pen/MXqPNE',
         title: 'Pseudoklasa',
         content: `Specjalny dopisek do selektora, dzięki któremu niektóre style dodają się doniego tylko w ściśle określonymprzypadku.
         Pseudoklasy zawsze zaczynamy dwukropkiem.`,
@@ -1032,7 +1041,7 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 100,
             height: 100,
             style: {
@@ -1102,7 +1111,7 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 100,
             height: 100,
             style: {
@@ -1152,6 +1161,7 @@ export default {
       content: {
         title: 'position: relative',
         content: `Po przesunięciu .box znajduje się w żółtej pozycji, jednak elementy otaczające go zachowują się tak, jakby nadal pozostawał w niebieskiej pozycji (stał w miejscu).`,
+        shapes: [],
         image: {
           src: `static/images/position_relative.png`,
           width: '600px',
@@ -1208,6 +1218,7 @@ export default {
       content: {
         title: 'position: absolute',
         content: `Po przesunięciu .box-2 znajduje się w żółtej pozycji, jednak elementy otaczające go (.box-1) zachowują się tak, jakby nie istniał.`,
+        shapes: [],
         image: {
           src: `static/images/position_absolute.png`,
           width: '500px',
@@ -1264,6 +1275,7 @@ export default {
       content: {
         title: 'position: fixed',
         content: `Po przesunięciu .box znajduje się w żółtej pozycji, jednak elementy otaczające go zachowują się tak, jakby nie istniał.`,
+        shapes: [],
         image: {
           src: `static/images/position_fixed.png`,
           width: '500px',
@@ -1273,7 +1285,7 @@ export default {
         codeSnippets: code.slide53,
         language: 'css',
         stylesObj: {
-          fontSize: 40,
+          fontSize: 50,
           position: 'absolute',
           top: '30%',
           left: '10%',
@@ -1289,6 +1301,7 @@ export default {
       content: {
         title: 'z-index',
         content: `Położenie elementu niestatycznego na osi Z. Określa "jak wysoko" znajdują się elementy.`,
+        shapes: [],
         image: {
           src: `static/gifs/z-index.gif`,
           width: '500px',
@@ -1365,8 +1378,17 @@ export default {
         title: 'Stworzenie zmiennej',
         content: `Zdefiniowana zmienna będzie dostępna wewnątrz danego selektora oraz we wszystkich jego dzieciach.`,
         additionalInfo: [],
-        shapes: [],
-        // Dodać prostokąt wokół root SVG
+        shapes: [
+          {
+            number: '1',
+            width: 180,
+            height: 100,
+            style: {
+              top: '48%',
+              left: '28%',
+            },
+          },
+        ],
         codeSnippets: code.slide59,
         language: 'css',
         stylesObj: {
@@ -1387,8 +1409,17 @@ export default {
         title: 'Stworzenie zmiennej',
         content: `Znaczniki informujące, że tworzymy zmienną.`,
         additionalInfo: [],
-        shapes: [],
-        // Dodać prostokąt wokół znaczników SVG
+        shapes: [
+          {
+            number: '1',
+            width: 65,
+            height: 90,
+            style: {
+              top: '57%',
+              left: '35%',
+            },
+          },
+        ],
         codeSnippets: code.slide59,
         language: 'css',
         stylesObj: {
@@ -1409,8 +1440,17 @@ export default {
         title: 'Stworzenie zmiennej',
         content: `Ustalona przez nas nazwa danej zmiennej.`,
         additionalInfo: [],
-        shapes: [],
-        // Dodać prostokąt wokół primaryColor SVG
+        shapes: [
+          {
+            number: '1',
+            width: 400,
+            height: 100,
+            style: {
+              top: '57%',
+              left: '38%',
+            },
+          },
+        ],
         codeSnippets: code.slide59,
         language: 'css',
         stylesObj: {
@@ -1431,8 +1471,17 @@ export default {
         title: 'Stworzenie zmiennej',
         content: `Wartość zmiennej.`,
         additionalInfo: [],
-        shapes: [],
-        // Dodać prostokąt wokół wartości SVG
+        shapes: [
+          {
+            number: '1',
+            width: 250,
+            height: 100,
+            style: {
+              top: '57%',
+              left: '62%',
+            },
+          },
+        ],
         codeSnippets: code.slide59,
         language: 'css',
         stylesObj: {
@@ -1456,7 +1505,7 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/arrow.svg',
+            src: arrow,
             width: 80,
             height: 80,
             style: {
@@ -1465,8 +1514,25 @@ export default {
               transform: 'rotate(90deg)',
             },
           },
+          {
+            number: '2',
+            width: 180,
+            height: 75,
+            style: {
+              top: '50%',
+              left: '54%',
+            },
+          },
+          {
+            number: '3',
+            width: 355,
+            height: 75,
+            style: {
+              top: '68%',
+              left: '48%',
+            },
+          },
         ],
-        // Dodać prostokąt wokół wartości i var(--primaryColor) SVG
         codeSnippets: code.slide63,
         language: 'css',
         stylesObj: {
@@ -1517,16 +1583,14 @@ export default {
         shapes: [
           {
             number: '1',
-            src: 'static/line-rectangle.svg', // zmienić ramkę
-            width: 400,
-            height: 200,
+            width: 455,
+            height: 100,
             style: {
-              top: '53%',
+              top: '56%',
               left: '40%',
             },
           },
         ],
-        // Dodać prostokąt wokół display:grid SVG
         codeSnippets: code.slide66,
         language: 'css',
         stylesObj: {
@@ -1546,6 +1610,7 @@ export default {
       content: {
         title: 'Odstępy między komórkami',
         content: ``,
+        shapes: [],
         image: {
           src: `static/images/grid.png`,
           width: '600px',
@@ -1571,6 +1636,17 @@ export default {
       content: {
         title: 'Odstępy między komórkami',
         content: `Określa odstęp pomiędzy wierszami.`,
+        shapes: [
+          {
+            number: '1',
+            width: 435,
+            height: 70,
+            style: {
+              top: '51%',
+              left: '16%',
+            },
+          },
+        ],
         image: {
           src: `static/images/grid-row-gap.png`,
           width: '600px',
@@ -1596,6 +1672,17 @@ export default {
       content: {
         title: 'Odstępy między komórkami',
         content: `Określa odstęp pomiędzy kolumnami.`,
+        shapes: [
+          {
+            number: '1',
+            width: 495,
+            height: 70,
+            style: {
+              top: '57%',
+              left: '16%',
+            },
+          },
+        ],
         image: {
           src: `static/images/grid-column-gap.png`,
           width: '600px',
@@ -1621,6 +1708,17 @@ export default {
       content: {
         title: 'Odstępy między komórkami',
         content: `Zapis skrócony. Pierwsza wartość definiuje odstęp międzywierszami, a druga między kolumnami. Jeżeli oba odstępy są identyczne, możemy zapisać tylko jedną wartość.`,
+        shapes: [
+          {
+            number: '1',
+            width: 470,
+            height: 70,
+            style: {
+              top: '63%',
+              left: '16%',
+            },
+          },
+        ],
         image: {
           src: `static/images/grid-gap.png`,
           width: '600px',
@@ -1646,13 +1744,14 @@ export default {
       content: {
         title: 'Tworzenie siatki',
         content: ``,
+        shapes: [],
         image: {
           src: `static/images/grid-template.png`,
           width: '600px',
           top: '40%',
           left: '10%',
         },
-        codeSnippets: code.slide68,
+        codeSnippets: code.slide71,
         language: 'css',
         stylesObj: {
           fontSize: 40,
@@ -1671,13 +1770,24 @@ export default {
       content: {
         title: 'Tworzenie siatki',
         content: `Wymiary każdej z kolumn.`,
+        shapes: [
+          {
+            number: '1',
+            width: 750,
+            height: 70,
+            style: {
+              top: '57%',
+              left: '56%',
+            },
+          },
+        ],
         image: {
           src: `static/images/grid-template.png`,
           width: '600px',
           top: '40%',
           left: '10%',
         },
-        codeSnippets: code.slide68,
+        codeSnippets: code.slide71,
         language: 'css',
         stylesObj: {
           fontSize: 40,
@@ -1696,13 +1806,24 @@ export default {
       content: {
         title: 'Tworzenie siatki',
         content: `Jednostka oznaczająca "ilość pozostałego miejsca". W tym przypadku będzie równa wielkości elementu po odjęciu 120px.`,
+        shapes: [
+          {
+            number: '1',
+            width: 95,
+            height: 70,
+            style: {
+              top: '57%',
+              left: '89.5%',
+            },
+          },
+        ],
         image: {
           src: `static/images/grid-template.png`,
           width: '600px',
           top: '40%',
           left: '10%',
         },
-        codeSnippets: code.slide68,
+        codeSnippets: code.slide71,
         language: 'css',
         stylesObj: {
           fontSize: 40,
@@ -1721,13 +1842,24 @@ export default {
       content: {
         title: 'Tworzenie siatki',
         content: `Wymiary każdego z wierszy.`,
+        shapes: [
+          {
+            number: '1',
+            width: 650,
+            height: 70,
+            style: {
+              top: '63%',
+              left: '56%',
+            },
+          },
+        ],
         image: {
           src: `static/images/grid-template.png`,
           width: '600px',
           top: '40%',
           left: '10%',
         },
-        codeSnippets: code.slide68,
+        codeSnippets: code.slide71,
         language: 'css',
         stylesObj: {
           fontSize: 40,
@@ -1747,9 +1879,18 @@ export default {
         title: 'Tworzenie siatki',
         content: `Jeśli nie określimy liczby i wielkości wierszy, powstanie ich tyle, aby grid pomieścił wszystkie swoje dzieci. Wysokość każdego wiersza będzie równa wysokości najwyższego dziecka w tym wierszu.`,
         additionalInfo: [],
-        shapes: [],
-        // dodać skreślenie
-        codeSnippets: code.slide68,
+        shapes: [
+          {
+            number: '1',
+            width: 650,
+            height: 0,
+            style: {
+              top: '71%',
+              left: '36%',
+            },
+          },
+        ],
+        codeSnippets: code.slide71,
         language: 'css',
         stylesObj: {
           fontSize: 40,
@@ -1768,6 +1909,7 @@ export default {
       content: {
         title: 'Rozłożenie elementów na siatce',
         content: ``,
+        shapes: [],
         image: {
           src: `static/images/grid-template1.png`,
           width: '600px',
@@ -1793,6 +1935,7 @@ export default {
       content: {
         title: 'Rozłożenie elementów na siatce',
         content: ``,
+        shapes: [],
         image: {
           src: `static/images/grid-template1.png`,
           width: '600px',
@@ -1818,6 +1961,7 @@ export default {
       content: {
         title: 'Rozłożenie elementów na siatce',
         content: ``,
+        shapes: [],
         image: {
           src: `static/images/grid-template1.png`,
           width: '600px',

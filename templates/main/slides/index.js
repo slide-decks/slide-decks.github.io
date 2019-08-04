@@ -23,6 +23,7 @@ import SectionHeader from './SectionHeader';
 import IFrame from './IFrame';
 import Image from './Image';
 import Finish from './Finish';
+import IFrameDescription from './IFrameDescription';
 
 export default {
   Title,
@@ -50,4 +51,5 @@ export default {
   IFrame,
   Image,
   Finish,
+  IFrameDescription,
 };
