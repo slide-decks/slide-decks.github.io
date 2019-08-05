@@ -37,48 +37,48 @@ const AdditionalInfo = styled.div`
 
 const Code = ({ title, content, additionalInfo, shapes, codeSnippets, styles, language, stylesObj }) => {
   const theme = useContext(ThemeContext);
-
+  const codeItems = codeSnippets.map(code => (
+    <Prism
+      key={code.id}
+      language={language}
+      style={theme === 'light' ? atomDefault : atomDark}
+      customStyle={{ background: theme === 'light' ? 'var(--white)' : 'var(--black)', ...stylesObj }}
+    >
+      {code.content.trim()}
+    </Prism>
+  ));
+  const additionalInfoItems = additionalInfo.map(info => (
+    <AdditionalInfo key={info.id} style={{ top: `${info.top}`, left: `${info.left}` }}>
+      {renderContent(info.text)}
+    </AdditionalInfo>
+  ));
+  const shapeItems = shapes.map(shape =>
+    shape.src ? (
+      <Shape
+        key={shape.number}
+        src={shape.src}
+        width={shape.width}
+        height={shape.height}
+        fill="var(--primary)"
+        style={shape.style}
+      />
+    ) : (
+      <Rectangle
+        key={shape.number}
+        width={shape.width}
+        height={shape.height}
+        fill="var(--primary)"
+        style={shape.style}
+      />
+    ),
+  );
   return (
     <Container styles={styles} className="code">
       <LineHeader alignSelf="center">{title}</LineHeader>
       <BoxHeading align="center" content={renderContent(content)} withMargin>
-        <Content>
-          {codeSnippets.map(code => (
-            <Prism
-              key={code.id}
-              language={language}
-              style={theme === 'light' ? atomDefault : atomDark}
-              customStyle={{ background: theme === 'light' ? 'var(--white)' : 'var(--black)', ...stylesObj }}
-            >
-              {code.content.trim()}
-            </Prism>
-          ))}
-        </Content>
-        {additionalInfo.map(info => (
-          <AdditionalInfo key={info.id} style={{ top: `${info.top}`, left: `${info.left}` }}>
-            {renderContent(info.text)}
-          </AdditionalInfo>
-        ))}
-        {shapes.map(shape =>
-          shape.src ? (
-            <Shape
-              key={shape.number}
-              src={shape.src}
-              width={shape.width}
-              height={shape.height}
-              fill="var(--primary)"
-              style={shape.style}
-            />
-          ) : (
-            <Rectangle
-              key={shape.number}
-              width={shape.width}
-              height={shape.height}
-              fill="var(--primary)"
-              style={shape.style}
-            />
-          ),
-        )}
+        <Content>{codeItems}</Content>
+        {additionalInfoItems}
+        {shapeItems}
       </BoxHeading>
     </Container>
   );

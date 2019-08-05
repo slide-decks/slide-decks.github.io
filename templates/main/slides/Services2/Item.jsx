@@ -12,6 +12,7 @@ const Container = styled.div`
 `;
 const Title = styled.h4`
   margin: 16px 0 8px;
+  color: var(--primary);
 `;
 
 const Item = ({ icon, title, content }) => (

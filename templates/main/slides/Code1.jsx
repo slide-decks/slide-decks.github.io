@@ -38,44 +38,43 @@ const Img = styled.img`
 
 const Code1 = ({ title, content, codeSnippets, image, shapes, styles, language, stylesObj }) => {
   const theme = useContext(ThemeContext);
-
+  const codeItems = codeSnippets.map(code => (
+    <Prism
+      key={code.id}
+      language={language}
+      style={theme === 'light' ? atomDefault : atomDark}
+      customStyle={{ background: theme === 'light' ? 'var(--white)' : 'var(--black)', ...stylesObj }}
+    >
+      {code.content.trim()}
+    </Prism>
+  ));
+  const shapeItems = shapes.map(shape =>
+    shape.src ? (
+      <Shape
+        key={shape.number}
+        src={shape.src}
+        width={shape.width}
+        height={shape.height}
+        fill="var(--primary)"
+        style={shape.style}
+      />
+    ) : (
+      <Rectangle
+        key={shape.number}
+        width={shape.width}
+        height={shape.height}
+        fill="var(--primary)"
+        style={shape.style}
+      />
+    ),
+  );
   return (
     <Container styles={styles} className="code">
       <LineHeader alignSelf="center">{title}</LineHeader>
       <BoxHeading align="center" content={renderContent(content)} withMargin>
-        <Content>
-          {codeSnippets.map(code => (
-            <Prism
-              key={code.id}
-              language={language}
-              style={theme === 'light' ? atomDefault : atomDark}
-              customStyle={{ background: theme === 'light' ? 'var(--white)' : 'var(--black)', ...stylesObj }}
-            >
-              {code.content.trim()}
-            </Prism>
-          ))}
-        </Content>
+        <Content>{codeItems}</Content>
         <Img src={image.src} style={{ top: `${image.top}`, left: `${image.left}` }} width={image.width} />
-        {shapes.map(shape =>
-          shape.src ? (
-            <Shape
-              key={shape.number}
-              src={shape.src}
-              width={shape.width}
-              height={shape.height}
-              fill="var(--primary)"
-              style={shape.style}
-            />
-          ) : (
-            <Rectangle
-              key={shape.number}
-              width={shape.width}
-              height={shape.height}
-              fill="var(--primary)"
-              style={shape.style}
-            />
-          ),
-        )}
+        {shapeItems}
       </BoxHeading>
     </Container>
   );

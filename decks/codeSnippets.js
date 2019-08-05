@@ -60,15 +60,14 @@ export default {
   slide13: [
     {
       id: '1',
-      content: `
-        <form action="" method="post" enctype="text/plain">
-        <input type="text" placeholder="USERNAME" name="username" required>
-        <input type="email" placeholder="EMAIL" name="email" required>
-        <input type="password" placeholder="PASSWORD" name="password" required>
-        <div class="size-xs">
-          By creating an account you agree to our <a href="#">Terms/Privacy</a>
-        </div>
-        <button type="submit">CREATE ACCOUNT</button>\n\t</form>`,
+      content: `<form action="" method="post" enctype="text/plain">
+      <input type="text" placeholder="USERNAME" name="username" required>
+      <input type="email" placeholder="EMAIL" name="email" required>
+      <input type="password" placeholder="PASSWORD" name="password" required>
+      <div class="size-xs">
+        By creating an account you agree to our <a href="#">Terms/Privacy</a>
+      </div>
+      <button type="submit">CREATE ACCOUNT</button>\n</form>`,
     },
   ],
   slide17: [

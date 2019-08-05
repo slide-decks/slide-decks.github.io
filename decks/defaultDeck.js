@@ -7,8 +7,8 @@ const timelineNoContent = css`
   }
 `;
 
-const arrow = 'static/arrow3.svg';
-const doubleArrow = 'static/double_arrow.svg';
+const arrow = 'static/svgs/arrow.svg';
+const doubleArrow = 'static/svgs/double_arrow.svg';
 
 export default {
   slides: [
@@ -22,11 +22,11 @@ export default {
         images: [
           {
             number: '1',
-            path: '/static/rwd_image.png',
+            path: '/static/images/rwd_image.png',
           },
           {
             number: '2',
-            path: '/static/sass.png',
+            path: '/static/images/sass.png',
           },
         ],
         title: 'WARSZTATY HTML i CSS 2',
@@ -356,7 +356,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        image: '/static/mockup.png',
+        image: '/static/images/mockup.png',
         title: 'Co zakodujemy - mockup',
         link: 'https://www.figma.com/file/BDpg9TcboEBXlmmlevMd8h/Untitled-(Copy)?node-id=13%3A21',
         width: 1100,
@@ -397,7 +397,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        image: '/static/meme-RWD.png',
+        image: '/static/images/meme-RWD.png',
         title: 'Po co nam responsywność?',
       },
     },
@@ -1334,7 +1334,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        image: '/static/z-index.png',
+        image: '/static/images/z-index.png',
         title: 'z-index',
         width: 450,
       },
@@ -1356,7 +1356,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        image: '/static/zmienne-css.png',
+        image: '/static/images/zmienne-css.png',
         title: 'Zmienne CSS',
         content: `Nazwy nadawane określonym wartościom właściwości CSS.
         Dzięki nim możemy później w kodzie odwoływać się do nazwy właściwości zamiast za każdym razem wpisywać jej wartość.`,
