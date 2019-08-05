@@ -1754,7 +1754,7 @@ export default {
         stylesObj: {
           fontSize: 40,
           position: 'absolute',
-          top: '25%',
+          top: '30%',
           left: '50%',
         },
       },
@@ -1774,7 +1774,7 @@ export default {
             width: 750,
             height: 70,
             style: {
-              top: '57%',
+              top: '62%',
               left: '56%',
             },
           },
@@ -1790,7 +1790,7 @@ export default {
         stylesObj: {
           fontSize: 40,
           position: 'absolute',
-          top: '25%',
+          top: '30%',
           left: '50%',
         },
       },
@@ -1810,7 +1810,7 @@ export default {
             width: 95,
             height: 70,
             style: {
-              top: '57%',
+              top: '62%',
               left: '89.5%',
             },
           },
@@ -1826,7 +1826,7 @@ export default {
         stylesObj: {
           fontSize: 40,
           position: 'absolute',
-          top: '25%',
+          top: '30%',
           left: '50%',
         },
       },
@@ -1846,7 +1846,7 @@ export default {
             width: 650,
             height: 70,
             style: {
-              top: '63%',
+              top: '68%',
               left: '56%',
             },
           },
@@ -1862,7 +1862,7 @@ export default {
         stylesObj: {
           fontSize: 40,
           position: 'absolute',
-          top: '25%',
+          top: '30%',
           left: '50%',
         },
       },
@@ -1919,7 +1919,7 @@ export default {
         stylesObj: {
           fontSize: 40,
           position: 'absolute',
-          top: '20%',
+          top: '25%',
           left: '50%',
         },
       },
@@ -1945,7 +1945,7 @@ export default {
         stylesObj: {
           fontSize: 40,
           position: 'absolute',
-          top: '20%',
+          top: '30%',
           left: '50%',
         },
       },
@@ -1971,7 +1971,7 @@ export default {
         stylesObj: {
           fontSize: 40,
           position: 'absolute',
-          top: '20%',
+          top: '30%',
           left: '50%',
         },
       },
