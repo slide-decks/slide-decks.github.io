@@ -984,7 +984,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        title: 'Pseudoelemnty',
+        title: 'Pseudoelementy',
         content: 'Posiadanie tej klasy zależy od miejsca elementu w dokumencie (w relacji do innych elementów).',
         items: [
           {
