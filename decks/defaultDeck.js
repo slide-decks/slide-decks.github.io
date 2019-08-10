@@ -408,7 +408,7 @@ export default {
         type: 'horizontal',
       },
       content: {
-        image: 'https://pic4.zhimg.com/v2-776f2c1d1d904eeb5c209b94408d29f1_1200x500.gif',
+        image: '/static/gifs/responsive.gif',
         title: 'Responsywność',
         content: `Zdolność strony internetowej do automatycznego dopasowywaniaswojego wyglądu do wielkości ekranu, na którym jest wyświetlana.`,
         stylesObj: {
