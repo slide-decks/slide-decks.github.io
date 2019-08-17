@@ -8,6 +8,7 @@ import { renderHead } from './renderers';
 import { Panel } from '../../templates/main/components';
 import ThemeContext from '../../templates/main/components/ThemeContext';
 import { ProgressBar } from '../../templates/main/components';
+import { ScreenSize } from '../../templates/main/components';
 import { updateURL, checkForStateChange, checkForNewAnimation, addKeysToSlides, getScale } from './utils';
 import { Container } from './styles';
 
@@ -41,29 +42,28 @@ class Deck extends Component {
     this.toggleTheme = this.toggleTheme.bind(this);
   }
 
-    toggleTheme() {
+  toggleTheme() {
     const theme = this.state.theme === 'dark' ? 'light' : 'dark';
     this.setState({ theme });
     document.documentElement.setAttribute('data-theme', theme);
-    document.documentElement.classList.add('theme-transition')
+    document.documentElement.classList.add('theme-transition');
     window.setTimeout(function() {
-      document.documentElement.classList.remove('theme-transition')
-    }, 1000)
+      document.documentElement.classList.remove('theme-transition');
+    }, 1000);
     this.forceUpdate();
-      }
+  }
 
   componentDidMount() {
     window.addEventListener('keydown', this.moveProgressBar);
     window.addEventListener('keydown', this.handleArrowPress);
     window.addEventListener('resize', this.handleScaleChange);
 
-
     if (this.template.scripts.onInit) {
       this.template.scripts.onInit(this);
     }
 
     this.handleScaleChange({ currentTarget: window });
-    this.setState({ percentage: this.state.slideIndex/(this.slidesCount - 1)*100 });
+    this.setState({ percentage: (this.state.slideIndex / (this.slidesCount - 1)) * 100 });
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -74,8 +74,8 @@ class Deck extends Component {
     updateURL(prevState, this.state, this.props.router);
     checkForNewAnimation(prevState, this.state, () => this.setState({ animation: null }));
 
-    if(this.state.slideIndex === 0){
-      this.setState({ percentage: 0})
+    if (this.state.slideIndex === 0) {
+      this.setState({ percentage: 0 });
     }
   }
 
@@ -119,17 +119,18 @@ class Deck extends Component {
         {this.head}
         <GlobalStyle templateStyle={this.template.styles} />
         <ThemeContext.Provider value={theme}>
-        <Container width={width} height={height} scale={scale}>
-          {this.slides.map(this.renderSlide)}
-          <Panel
-            actualSlide={slideIndex}
-            slides={this.slidesCount}
-            prevSlide={this.prevSlide}
-            nextSlide={this.nextSlide}
-            newTheme={this.toggleTheme}
-          />
-          <ProgressBar percentage={percentage} />
-        </Container>
+          <Container width={width} height={height} scale={scale}>
+            {this.slides.map(this.renderSlide)}
+            <Panel
+              actualSlide={slideIndex}
+              slides={this.slidesCount}
+              prevSlide={this.prevSlide}
+              nextSlide={this.nextSlide}
+              newTheme={this.toggleTheme}
+            />
+            <ScreenSize />
+            <ProgressBar percentage={percentage} />
+          </Container>
         </ThemeContext.Provider>
       </>
     );

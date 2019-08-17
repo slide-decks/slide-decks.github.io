@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Component } from 'react';
+import { setMouseMove } from '../../../slide-deck/Deck/slides-methods';
 
 const Container = styled.div`
     position: absolute;
@@ -10,6 +11,8 @@ const Container = styled.div`
     flex-direction: column;
     align-items: flex-end;
     padding: 0 21px 10px 0;
+    transition: opacity 1500ms;
+    opacity: 1;
    
     p {
         color: var(--blue);
@@ -27,11 +30,12 @@ const Wrapper = styled.div`
     border-radius: 8px;
     margin-bottom: 4px;
     padding: 3px 5px 2px 7px;
-    transition: opacity 1500ms;
+    transition: all 1500ms;
     opacity: 0;
-    
+    margin-right: -400px;
     &.show {
         opacity: 1;
+        margin-right: 0;
     }
 
     button {
@@ -57,7 +61,7 @@ const Arrows = styled.div`
     padding-bottom: 9px;
 `;
 
-const LeftArrow = styled.div`
+const LeftArrow = styled.button`
     cursor: pointer;
 
     img {
@@ -97,32 +101,62 @@ const ShowIcon = styled.button`
 class Panel extends Component {
     constructor(props){
         super(props);
+        
+        this.timer = null;
 
         this.state = {
             isMinimized: false,
+            isVisible: false,
         }
+
+    this.setMouseMove = setMouseMove.bind(this);
     }
 
-    toggleToolbar = () => {
-        const checkTo = !this.state.isMinimized;
-        this.setState({ isMinimized: checkTo });
+    componentDidMount() {
+        document.addEventListener('click', () => this.setMouseMove());
+        window.addEventListener('mousemove', () => this.setMouseMove());
+        window.addEventListener('click', () => {
+            this.setState({ isMinimized: false });
+        })
     }
+
+    toggleToolbar = e => {
+        e.stopPropagation();
+        const checkTo = !this.state.isMinimized;
+        this.setState({ isMinimized: checkTo});
+        this.setMouseMove();
+    };
+
 
     render(){
         const { actualSlide, slides, prevSlide, nextSlide, newTheme } = this.props;
+        
+        const toggleButtonStyle = {
+            opacity: this.state.isVisible ? '1': '0',
+        };
+
+        const changeCursor = {
+            cursor: this.state.isVisible ? 'pointer' : 'none',
+        };
+
         return (
-        <Container>
-            <Wrapper className={ this.state.isMinimized ? "show" : null }>
+        <Container id="container" style={toggleButtonStyle}>
+            <Wrapper id="wrapper" onClick = {e => e.stopPropagation()} className={ this.state.isMinimized ? "show" : null }>
                 <Arrows className="arrows">
-                    <LeftArrow onClick={prevSlide}><img src="/static/icons/light/small_arrow_up.svg"/></LeftArrow>
+                    <LeftArrow style = {changeCursor} disabled={!this.state.isVisible} onClick={prevSlide}><img src="/static/icons/light/small_arrow_up.svg"/></LeftArrow>
                     <SlideNumber className="slide-number">
                         <p> {actualSlide + 1}|{slides} </p>
                     </SlideNumber>
-                    <RightArrow onClick={nextSlide}><img src="/static/icons/light/small_arrow_up.svg"/></RightArrow>
+                    <RightArrow style = {changeCursor} onClick={nextSlide}><img src="/static/icons/light/small_arrow_up.svg"/></RightArrow>
                 </Arrows>
-                <button onClick={newTheme}><img src="/static/icons/light/theme_btn.svg"/></button>
+                <button style = {changeCursor} disabled={!this.state.isVisible} onClick={newTheme}><img src="/static/icons/light/theme_btn.svg"/></button>
             </Wrapper>
-            <ShowIcon onClick={this.toggleToolbar}><img  className={ this.state.isMinimized ? "show" : null } src="/static/icons/light/small_arrow_up.svg"/></ShowIcon>
+            <ShowIcon 
+                style = {changeCursor} 
+                disabled={!this.state.isVisible} 
+                onClick={this.toggleToolbar}>
+                <img  className={ this.state.isMinimized ? "show" : null } src="/static/icons/light/small_arrow_up.svg"/>
+            </ShowIcon>
         </Container>
         );
     };

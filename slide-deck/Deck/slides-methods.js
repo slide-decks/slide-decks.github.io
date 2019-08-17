@@ -22,6 +22,20 @@ export function prevSlide() {
 }
 }
 
+export function  setMouseMove() {
+  this.setState({ isVisible: true });
+  document.body.style.cursor = 'default';
+  
+      (() => {
+      clearTimeout(this.timer);
+      this.timer = setTimeout(() => {
+          this.setState({ isVisible: false });
+          document.body.style.cursor = 'none';
+      }, 10000);
+          })();
+      };
+
+      
 export function handleArrowPress({ keyCode }) {
   const { slideIndex } = this.state;
   if (keyCode === 37 && slideIndex !== 0) {
@@ -30,3 +44,4 @@ export function handleArrowPress({ keyCode }) {
     this.nextSlide();
   }
 };
+
