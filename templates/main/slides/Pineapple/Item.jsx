@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
 
 const Container = styled.div`
     padding-bottom: 94px;
@@ -41,7 +41,7 @@ const Content = styled.div`
 `;
 
 
-const Item = ({ name, content }) => (
+const Item = ({ name, content, id }) => (
     <Container>
         <Circle></Circle>
         <Wrapper>
@@ -54,6 +54,7 @@ const Item = ({ name, content }) => (
 Item.propTypes = {
     name: string,
     content: string,
+    id: number,
 }
 
 export default Item;

@@ -5,9 +5,10 @@ import GlobalStyle from '../GlobalStyle';
 import Slide from '../Slide';
 import { nextSlide, prevSlide, handleArrowPress } from './slides-methods';
 import { renderHead } from './renderers';
-import { Panel } from '../../templates/main/components';
 import ThemeContext from '../../templates/main/components/ThemeContext';
+import { Panel } from '../../templates/main/components';
 import { ProgressBar } from '../../templates/main/components';
+import { ScreenSize } from '../../templates/main/components';
 import { updateURL, checkForStateChange, checkForNewAnimation, addKeysToSlides, getScale } from './utils';
 import { Container } from './styles';
 
@@ -119,15 +120,16 @@ class Deck extends Component {
         {this.head}
         <GlobalStyle templateStyle={this.template.styles} />
         <ThemeContext.Provider value={theme}>
-        <Container width={width} height={height} scale={scale}>
+        <Container id="slide-screen" width={width} height={height} scale={scale}>
           {this.slides.map(this.renderSlide)}
-          <Panel
-            actualSlide={slideIndex}
-            slides={this.slidesCount}
+          <Panel 
+            actualSlide={slideIndex} 
+            slides={this.slidesCount} 
             prevSlide={this.prevSlide}
             nextSlide={this.nextSlide}
             newTheme={this.toggleTheme}
           />
+          <ScreenSize />
           <ProgressBar percentage={percentage} />
         </Container>
         </ThemeContext.Provider>

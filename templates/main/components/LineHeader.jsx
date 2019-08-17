@@ -27,7 +27,7 @@ const LineHeader = ({ align, alignSelf, children }) => (
 );
 
 LineHeader.propTypes = {
-  children: node.isRequired,
+  children: node,
   align: oneOf(['left', 'center']),
   alignSelf: oneOf(['left', 'center']),
 };

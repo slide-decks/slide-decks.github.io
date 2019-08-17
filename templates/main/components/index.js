@@ -8,3 +8,4 @@ export ProgressBar from './ProgressBar';
 export Shape from './Shape';
 export IFrame from './IFrame';
 export Rectangle from './Rectangle';
+export ScreenSize from './ScreenSize';

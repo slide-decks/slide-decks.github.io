@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { string, arrayOf, exact } from 'prop-types';
+import { string, arrayOf, exact, number } from 'prop-types';
 import { LineHeader } from '../../components';
 import Item from './Item';
 
@@ -71,7 +71,7 @@ const Pineapple = ({ title, content, items }) => (
             <Wrapper>
                 <Items>
                     {items.map(item => (
-                    <Item key={item.name} {...item} />
+                    <Item key={item.id} {...item} />
                     ))}
                 </Items>
             </Wrapper>
@@ -85,7 +85,8 @@ Pineapple.propTypes = {
     items: arrayOf(
         exact({
             name: string,
-            content: string
+            content: string,
+            id: number,
         })
     )
 }
