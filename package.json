@@ -1,5 +1,6 @@
 {
   "name": "react-slide-decks",
+  "homepage": "http://slide-decks.github.io/slide-decks.github.io",
   "version": "0.0.1",
   "main": "index.js",
   "author": "Konrad Szwarc",
@@ -7,6 +8,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "deploy": "gh-pages -d build",
     "start": "next start -p $PORT",
     "export": "yarn run build && next export -o ./docs",
     "heroku-postbuild": "next build"
@@ -26,6 +28,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "classnames": "^2.2.6",
     "file-loader": "^3.0.1",
+    "gh-pages": "^2.1.1",
     "next": "^8.0.3",
     "node-sass": "^4.11.0",
     "prism-react-renderer": "^0.1.6",
